@@ -4,7 +4,7 @@ import json
 
 from requests import Session
 
-from config import *
+from .config import *
 from log import logger_
 
 
@@ -12,8 +12,10 @@ class Response(object):
     """wrap response"""
 
     def __init__(self, resp):
-        self._payload = json.loads(resp.text)
+        self.payload = json.loads(resp.text)
         self.ok = resp.ok
+        if not self.ok:
+            self.error = self.payload['error']
         self.status_code = resp.status_code
         self.elapsed = resp.elapsed
 
@@ -30,7 +32,7 @@ class ThreeCommas(object):
 
     def _get(self, endpoint, **kwargs):
 
-        path = self._make_path(endpoint, kwargs)
+        path = self._make_path(endpoint, **kwargs)
         signature = self._generate_signature(path)
         headers = {
             'APIKEY': self.key,
@@ -95,5 +97,15 @@ class ThreeCommas(object):
     def start_new_deal(self, **kwargs):
         endpoint = BOT_START_NEW_DEAL.replace('{bot_id}', str(kwargs['bot_id']))
         self._logger.info('call endpoint: {}'.format(endpoint))
-        self._logger.info('pair is {}'.format(kwargs['pair']))
         return self._post(endpoint, **kwargs)
+
+    def deals_stats(self, **kwargs):
+        endpoint = BOT_DEALS_STATS.replace('{bot_id}', str(kwargs['bot_id']))
+        self._logger.info('call endpoint: {}'.format(endpoint))
+        return self._get(endpoint, **kwargs)
+
+    def bot_info(self, **kwargs):
+        endpoint = BOT_INFO.replace('{bot_id}', str(kwargs['bot_id']))
+        self._logger.info('call endpoint: {}'.format(endpoint))
+        return self._get(endpoint, **kwargs)
+

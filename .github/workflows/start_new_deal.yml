@@ -1,14 +1,14 @@
 name: 3commas
 
 on:
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
   schedule:
-    - cron: '* * * * *' # every minute
+    - cron: '*/5 * * * *' # every 5 minute
 
 jobs:
-  get_top_stories:
+  start_deals:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

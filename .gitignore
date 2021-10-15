@@ -1,2 +1,4 @@
 .idea
 dist
+__pycache__/
+commasapi/__pycache__/
