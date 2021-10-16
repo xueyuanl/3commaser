@@ -10,26 +10,40 @@ secret = os.getenv('SECRET')
 threec = ThreeCommas(key, secret)
 
 
+def is_bot_available(bot_info):
+    return bot_info['is_enabled'] and bot_info['active_deals_count'] < bot_info['max_active_deals']
+
+
+def is_pair_available(pair, active_pairs, deals_number):
+    pair_number = 0
+    for a in active_pairs:
+        if a == pair:
+            pair_number += 1
+    return pair_number < deals_number
+
+
 def main():
     # for each bot
     for bot_id in BOT_LIST:
         # get bot info
-        res = threec.bot_info(bot_id=bot_id)
-        bot_info = res.payload
+        bot_info = threec.bot_info(bot_id=bot_id).payload
+        logger_.info('get bot: {}, id: {}'.format(bot_info['name'], str(bot_id)))
 
-        logger_.info('start config bot: {}, id: {}'.format(bot_info['name'], str(bot_id)))
+        if not is_bot_available(bot_info):
+            logger_.info('bot {} is not available, id: {}'.format(bot_info['name'], str(bot_id)))
+            continue
+
         active_deals = bot_info['active_deals']
         active_pairs = [a['pair'] for a in active_deals]
         logger_.info('get active pair list: {}'.format(active_pairs))
 
         pairs = bot_info['pairs']
         logger_.info('get pair list: {}'.format(pairs))
-
         for p in pairs:
-            if p in active_pairs:
-                logger_.info('pair {} is still in deal, skip'.format(p))
+            if not is_pair_available(p, active_pairs, bot_info['allowed_deals_on_same_pair']):
+                logger_.info('pair {} is still in deals, skip'.format(p))
                 continue
-            logger_.info('start pair {}'.format(p))
+            logger_.info('start add deal for pair {}'.format(p))
             res = threec.start_new_deal(bot_id=bot_id, pair=p)
             if res.ok:
                 logger_.info('started a new deal for {}'.format(p))
