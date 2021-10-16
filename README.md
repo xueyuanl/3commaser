@@ -9,7 +9,7 @@ But the shortage of this solution is that the minimum time interval of GitHub ac
 For more GitHub Action limitation, refer: https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration
 
 ### how to use
-1. Firstly create a composite bot. add all the pair you want to run.
-2. clone this repo to your account and change some config.
-2. config the `config.py` file,  change you quote and  add all your pairs in step1 to the base.
-3. push all the repo to your github repo and it is supposed to work.
+1. Firstly create some composite bots, add all the pair you want to run and write down the ids of them.
+2. Clone this repo to your account and change some config.
+2. Just Add your bot ids in the list in the `config.py` file.
+3. Push the change to your new repo, just like that.

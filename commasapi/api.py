@@ -87,25 +87,20 @@ class ThreeCommas(object):
         return signature
 
     def accounts_list(self, **kwargs):
-        self._logger.info('call endpoint: {}'.format(ACCOUNTS))
         return self._get(ACCOUNTS, **kwargs)
 
     def bots_list(self, **kwargs):
-        self._logger.info('call endpoint: {}'.format(BOTS))
         return self._get(BOTS, **kwargs)
 
     def start_new_deal(self, **kwargs):
         endpoint = BOT_START_NEW_DEAL.replace('{bot_id}', str(kwargs['bot_id']))
-        self._logger.info('call endpoint: {}'.format(endpoint))
         return self._post(endpoint, **kwargs)
 
     def deals_stats(self, **kwargs):
         endpoint = BOT_DEALS_STATS.replace('{bot_id}', str(kwargs['bot_id']))
-        self._logger.info('call endpoint: {}'.format(endpoint))
         return self._get(endpoint, **kwargs)
 
     def bot_info(self, **kwargs):
         endpoint = BOT_INFO.replace('{bot_id}', str(kwargs['bot_id']))
-        self._logger.info('call endpoint: {}'.format(endpoint))
         return self._get(endpoint, **kwargs)
 
