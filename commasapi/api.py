@@ -4,8 +4,8 @@ import json
 
 from requests import Session
 
-from .config import *
 from log import logger_
+from .config import *
 
 
 class Response(object):
@@ -49,8 +49,8 @@ class ThreeCommas(object):
             raise e
 
     def _post(self, endpoint, **kwargs):
-        path = self._make_path(endpoint, **kwargs)
-        signature = self._generate_signature(path)
+        path = PUBLIC_API + API_VERSION + endpoint
+        signature = self._generate_signature(path, data=json.dumps(kwargs))
         headers = {
             'APIKEY': self.key,
             'Signature': signature
@@ -59,7 +59,7 @@ class ThreeCommas(object):
         url = '{}{}'.format(self.base_url, path)
         self._logger.info('calling POST api: {}'.format(url))
         try:
-            response = self._session.post(url)
+            response = self._session.post(url, json=kwargs)
             rep = Response(response)
             return rep
         except Exception as e:
@@ -104,3 +104,10 @@ class ThreeCommas(object):
         endpoint = BOT_INFO.replace('{bot_id}', str(kwargs['bot_id']))
         return self._get(endpoint, **kwargs)
 
+    def bot_enable(self, **kwargs):
+        endpoint = BOT_ENABLE.replace('{bot_id}', str(kwargs['bot_id']))
+        return self._post(endpoint, **kwargs)
+
+    def bot_disable(self, **kwargs):
+        endpoint = BOT_DISABLE.replace('{bot_id}', str(kwargs['bot_id']))
+        return self._post(endpoint, **kwargs)
