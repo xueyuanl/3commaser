@@ -1,20 +1,30 @@
 class BasePreset(object):
-    def __init__(self):
-        self.base_order
-        self.safety_order
+    take_profit = 1.5
+    take_profit_type = 'total'
+    active_safety_orders_count = 1
 
-        self.take_profit
-
-        self.max_safety_orders
-        self.active_safety_orders_count
-
-        self.safety_order_step_percentage
-        self.safety_order_volume_scale
-        self.safety_order_step_scale
+    strategy_list = [{"strategy": "nonstop"}]
+    start_order_type = 'limit'
 
 
-class TAS1(BasePreset):
-    def __init__(self):
-        self.pairs = []
-        self.bots = []
-        self.exchanges = []
+class Size(object):
+    base_order_volume = 10
+    safety_order_volume = 20
+
+
+class TAS1(BasePreset, Size):
+
+    max_safety_orders = 25
+    safety_order_step_percentage = 2.4
+
+    martingale_volume_coefficient = 1.05
+    martingale_step_coefficient = 1
+
+
+class HF1(BasePreset, Size):
+
+    max_safety_orders = 25
+    safety_order_step_percentage = 0.24
+
+    martingale_volume_coefficient = 1.05
+    martingale_step_coefficient = 1

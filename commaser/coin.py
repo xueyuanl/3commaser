@@ -1,11 +1,15 @@
-class Coin(object):
-    def __init__(self, name):
-        self.name = name
-        self.kind = ''  # main, alts, salts
+from enum import Enum
+
+
+class Coin(Enum):
+    BTC = 'BTC'
 
 
 class Pair(object):
-    def __init__(self):
+    def __init__(self, base, quote):
         self.base = ''  # SOL
         self.quote = ''  # USDT
 
+
+class Quote(Enum):
+    USDT = 'USDT'

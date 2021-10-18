@@ -12,10 +12,10 @@ class Response(object):
     """wrap response"""
 
     def __init__(self, resp):
-        self.payload = json.loads(resp.text)
+        self.data = json.loads(resp.text)
         self.ok = resp.ok
         if not self.ok:
-            self.error = self.payload['error']
+            self.error = self.data['error']
         self.status_code = resp.status_code
         self.elapsed = resp.elapsed
 
@@ -99,6 +99,9 @@ class ThreeCommas(object):
     def deals_stats(self, **kwargs):
         endpoint = BOT_DEALS_STATS.replace('{bot_id}', str(kwargs['bot_id']))
         return self._get(endpoint, **kwargs)
+
+    def bot_create(self, **kwargs):
+        return self._post(BOT_CREATE, **kwargs)
 
     def bot_info(self, **kwargs):
         endpoint = BOT_INFO.replace('{bot_id}', str(kwargs['bot_id']))

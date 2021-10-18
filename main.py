@@ -26,7 +26,7 @@ def main():
     # for each bot
     for bot_id in BOT_LIST:
         # get bot info
-        bot_info = threec.bot_info(bot_id=bot_id).payload
+        bot_info = threec.bot_info(bot_id=bot_id).data
         logger_.info('get bot: {}, id: {}'.format(bot_info['name'], str(bot_id)))
 
         if not is_bot_available(bot_info):
