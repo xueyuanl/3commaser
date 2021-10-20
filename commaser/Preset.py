@@ -7,13 +7,12 @@ class BasePreset(object):
     start_order_type = 'limit'
 
 
-class Size(object):
+class Size1(object):
     base_order_volume = 10
     safety_order_volume = 20
 
 
-class TAS1(BasePreset, Size):
-
+class TA_S1(BasePreset, Size1):
     max_safety_orders = 25
     safety_order_step_percentage = 2.4
 
@@ -21,10 +20,15 @@ class TAS1(BasePreset, Size):
     martingale_step_coefficient = 1
 
 
-class HF1(BasePreset, Size):
-
+class HF_S1(BasePreset, Size1):
     max_safety_orders = 25
     safety_order_step_percentage = 0.24
 
     martingale_volume_coefficient = 1.05
     martingale_step_coefficient = 1
+
+
+presets = {
+    TA_S1.__name__: TA_S1,
+    HF_S1.__name__: HF_S1
+}

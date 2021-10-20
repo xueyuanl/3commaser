@@ -1,0 +1,79 @@
+{
+  "MAIN HFS1": {
+    "name": "HF_S1",
+    "coin_level": "MAIN",
+    "exchanges": [
+      {
+        "name": "Paper",
+        "id": 31028998,
+        "quote": "USDT",
+        "coins": [
+          {
+            "name": "BTC",
+            "number": 3,
+            "bots": [
+              {
+                "name": "BTC_USDT MAIN HF_S1 AUTO",
+                "id": 6489895,
+                "stats": "enabled"
+              },
+              {
+                "name": "BTC_USDT MAIN HF_S1 AUTO",
+                "id": 6489896,
+                "stats": "enabled"
+              },
+              {
+                "name": "BTC_USDT MAIN HF_S1 AUTO",
+                "id": 6490046,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "ETH",
+            "number": 1,
+            "bots": [
+              {
+                "name": "ETH_USDT MAIN HF_S1 AUTO",
+                "id": 6489897,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "SOL",
+            "number": 2,
+            "bots": [
+              {
+                "name": "SOL_USDT MAIN HF_S1 AUTO",
+                "id": 6489898,
+                "stats": "enabled"
+              },
+              {
+                "name": "SOL_USDT MAIN HF_S1 AUTO",
+                "id": 6489899,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "DOGE",
+            "number": 2,
+            "bots": [
+              {
+                "name": "DOGE_USDT MAIN HF_S1 AUTO",
+                "id": 6490619,
+                "stats": "enabled"
+              },
+              {
+                "name": "DOGE_USDT MAIN HF_S1 AUTO",
+                "id": 6490620,
+                "stats": "enabled"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
