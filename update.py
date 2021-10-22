@@ -46,8 +46,6 @@ def update_bots(coin, bot_spec):
     target_number = coin['number']
     enabled_bot_list = []
     disabled_bot_list = []
-    if 'bots' not in coin:
-        coin['bots'] = []
     for b in coin['bots']:
         if b['stats'] == Bot.DISABLED:
             disabled_bot_list.append(b)
@@ -89,11 +87,35 @@ def update_bots(coin, bot_spec):
             coin['bots'].append(bot)
 
 
+def clean_bots(data):
+    logger_.info('start to clean disabled bots')
+    for k, v in data.items():
+        for e in v['exchanges']:
+            for coin in e['coins']:
+                stay_bots = []
+                if 'bots' not in coin:
+                    coin['bots'] = []
+                for bot in coin['bots']:
+                    if bot['stats'] == Bot.ENABLED:
+                        stay_bots.append(bot)
+                    else:
+                        bot_info = threec.bot_info(bot_id=bot['id'])
+                        if not bot_info.data['is_enabled'] and bot_info.data['deletable?']:
+                            logger_.info('delete bot {} in exchange {}, id: {}'.format(bot_info.data['name'],
+                                                                                       e['name'], bot['id']))
+                            threec.bot_delete(bot_id=bot['id'])
+                        else:
+                            stay_bots.append(bot)
+                coin['bots'] = stay_bots
+
+
 def main():
     # res = threec.accounts_list()
 
     with open('config.json') as f:
         data = json.load(f)
+    # clean disabled bots
+    clean_bots(data)
 
     for k, v in data.items():
         for e in v['exchanges']:

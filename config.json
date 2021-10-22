@@ -14,17 +14,17 @@
             "bots": [
               {
                 "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6489895,
+                "id": 6515473,
                 "stats": "enabled"
               },
               {
                 "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6489896,
+                "id": 6515474,
                 "stats": "enabled"
               },
               {
                 "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6490046,
+                "id": 6515475,
                 "stats": "enabled"
               }
             ]
@@ -35,7 +35,7 @@
             "bots": [
               {
                 "name": "ETH_USDT MAIN HF_S1 AUTO",
-                "id": 6489897,
+                "id": 6515477,
                 "stats": "enabled"
               }
             ]
@@ -46,12 +46,12 @@
             "bots": [
               {
                 "name": "SOL_USDT MAIN HF_S1 AUTO",
-                "id": 6489898,
+                "id": 6515478,
                 "stats": "enabled"
               },
               {
                 "name": "SOL_USDT MAIN HF_S1 AUTO",
-                "id": 6489899,
+                "id": 6515480,
                 "stats": "enabled"
               }
             ]
@@ -62,12 +62,147 @@
             "bots": [
               {
                 "name": "DOGE_USDT MAIN HF_S1 AUTO",
-                "id": 6490619,
+                "id": 6515481,
                 "stats": "enabled"
               },
               {
                 "name": "DOGE_USDT MAIN HF_S1 AUTO",
-                "id": 6490620,
+                "id": 6515482,
+                "stats": "enabled"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "FALTS TA_S2": {
+    "name": "TA_S2",
+    "coin_level": "FALTS",
+    "exchanges": [
+      {
+        "name": "FTX",
+        "id": 30998693,
+        "quote": "USD",
+        "coins": [
+          {
+            "name": "SOL",
+            "number": 5,
+            "bots": [
+              {
+                "name": "SOL_USD FALTS TA_S2 AUTO",
+                "id": 6515483,
+                "stats": "enabled"
+              },
+              {
+                "name": "SOL_USD FALTS TA_S2 AUTO",
+                "id": 6515485,
+                "stats": "enabled"
+              },
+              {
+                "name": "SOL_USD FALTS TA_S2 AUTO",
+                "id": 6515487,
+                "stats": "enabled"
+              },
+              {
+                "name": "SOL_USD FALTS TA_S2 AUTO",
+                "id": 6515488,
+                "stats": "enabled"
+              },
+              {
+                "name": "SOL_USD FALTS TA_S2 AUTO",
+                "id": 6515489,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "FTM",
+            "number": 1,
+            "bots": [
+              {
+                "name": "FTM_USD FALTS TA_S2 AUTO",
+                "id": 6515490,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "FTT",
+            "number": 2,
+            "bots": [
+              {
+                "name": "FTT_USD FALTS TA_S2 AUTO",
+                "id": 6515493,
+                "stats": "enabled"
+              },
+              {
+                "name": "FTT_USD FALTS TA_S2 AUTO",
+                "id": 6515494,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "REN",
+            "number": 1,
+            "bots": [
+              {
+                "name": "REN_USD FALTS TA_S2 AUTO",
+                "id": 6515495,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "AXS",
+            "number": 1,
+            "bots": [
+              {
+                "name": "AXS_USD FALTS TA_S2 AUTO",
+                "id": 6515496,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "RUNE",
+            "number": 5,
+            "bots": [
+              {
+                "name": "RUNE_USD FALTS TA_S2 AUTO",
+                "id": 6515497,
+                "stats": "enabled"
+              },
+              {
+                "name": "RUNE_USD FALTS TA_S2 AUTO",
+                "id": 6515498,
+                "stats": "enabled"
+              },
+              {
+                "name": "RUNE_USD FALTS TA_S2 AUTO",
+                "id": 6515499,
+                "stats": "enabled"
+              },
+              {
+                "name": "RUNE_USD FALTS TA_S2 AUTO",
+                "id": 6515500,
+                "stats": "enabled"
+              },
+              {
+                "name": "RUNE_USD FALTS TA_S2 AUTO",
+                "id": 6515501,
+                "stats": "enabled"
+              }
+            ]
+          },
+          {
+            "name": "SRM",
+            "number": 1,
+            "bots": [
+              {
+                "name": "SRM_USD FALTS TA_S2 AUTO",
+                "id": 6515502,
                 "stats": "enabled"
               }
             ]

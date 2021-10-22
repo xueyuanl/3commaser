@@ -114,3 +114,8 @@ class ThreeCommas(object):
     def bot_disable(self, **kwargs):
         endpoint = BOT_DISABLE.replace('{bot_id}', str(kwargs['bot_id']))
         return self._post(endpoint, **kwargs)
+
+    def bot_delete(self, **kwargs):
+        endpoint = BOT_DELETE.replace('{bot_id}', str(kwargs['bot_id']))
+        return self._post(endpoint, **kwargs)
+
