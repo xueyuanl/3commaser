@@ -1,211 +1,78 @@
 {
-  "MAIN HFS1": {
-    "name": "HF_S1",
-    "coin_level": "MAIN",
-    "exchanges": [
+  "FTX3commas": {
+    "groups": [
       {
-        "name": "Paper",
-        "id": 31028998,
-        "quote": "USDT",
+        "name": "level_1",
+        "quote": "USD",
+        "pair_number": 1,
         "coins": [
+          "DOGE"
+        ],
+        "bots": [
           {
-            "name": "BTC",
-            "number": 3,
-            "bots": [
-              {
-                "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6515473,
-                "stats": "enabled"
-              },
-              {
-                "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6515474,
-                "stats": "enabled"
-              },
-              {
-                "name": "BTC_USDT MAIN HF_S1 AUTO",
-                "id": 6515475,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "DOGE",
+            "name": "DOGE_USD level 1 TA_S1 AUTO",
+            "id": 6558608
           },
           {
-            "name": "ETH",
-            "number": 1,
-            "bots": [
-              {
-                "name": "ETH_USDT MAIN HF_S1 AUTO",
-                "id": 6515477,
-                "stats": "enabled"
-              }
-            ]
-          },
-          {
-            "name": "SOL",
-            "number": 2,
-            "bots": [
-              {
-                "name": "SOL_USDT MAIN HF_S1 AUTO",
-                "id": 6515478,
-                "stats": "enabled"
-              },
-              {
-                "name": "SOL_USDT MAIN HF_S1 AUTO",
-                "id": 6515480,
-                "stats": "enabled"
-              }
-            ]
-          },
-          {
-            "name": "DOGE",
-            "number": 2,
-            "bots": [
-              {
-                "name": "DOGE_USDT MAIN HF_S1 AUTO",
-                "id": 6515481,
-                "stats": "enabled"
-              },
-              {
-                "name": "DOGE_USDT MAIN HF_S1 AUTO",
-                "id": 6515482,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "RUNE",
+            "name": "RUNE_USD level_1 TA_S2 AUTO",
+            "id": 6558685
           }
         ]
-      }
-    ]
-  },
-  "FALTS TA_S2": {
-    "name": "TA_S2",
-    "coin_level": "FALTS",
-    "exchanges": [
+      },
       {
-        "name": "FTX",
-        "id": 30998693,
+        "name": "level_2",
         "quote": "USD",
+        "pair_number": 2,
         "coins": [
+          "DOGE"
+        ],
+        "bots": [
           {
-            "name": "SOL",
-            "number": 5,
-            "bots": [
-              {
-                "name": "SOL_USD FALTS TA_S2 AUTO",
-                "id": 6515483,
-                "stats": "enabled"
-              },
-              {
-                "name": "SOL_USD FALTS TA_S2 AUTO",
-                "id": 6515485,
-                "stats": "enabled"
-              },
-              {
-                "name": "SOL_USD FALTS TA_S2 AUTO",
-                "id": 6515487,
-                "stats": "enabled"
-              },
-              {
-                "name": "SOL_USD FALTS TA_S2 AUTO",
-                "id": 6515488,
-                "stats": "enabled"
-              },
-              {
-                "name": "SOL_USD FALTS TA_S2 AUTO",
-                "id": 6515489,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "DOGE",
+            "name": "DOGE_USDT level 2 TA_S1 AUTO",
+            "id": 6558614
           },
           {
-            "name": "FTM",
-            "number": 1,
-            "bots": [
-              {
-                "name": "FTM_USD FALTS TA_S2 AUTO",
-                "id": 6515490,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "DOGE",
+            "name": "DOGE_USDT level 2 TA_S1 AUTO",
+            "id": 6558615
           },
           {
-            "name": "FTT",
-            "number": 2,
-            "bots": [
-              {
-                "name": "FTT_USD FALTS TA_S2 AUTO",
-                "id": 6515493,
-                "stats": "enabled"
-              },
-              {
-                "name": "FTT_USD FALTS TA_S2 AUTO",
-                "id": 6515494,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "RUNE",
+            "name": "RUNE_USDT level_2 TA_S2 AUTO",
+            "id": 6558686
           },
           {
-            "name": "REN",
-            "number": 1,
-            "bots": [
-              {
-                "name": "REN_USD FALTS TA_S2 AUTO",
-                "id": 6515495,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "RUNE",
+            "name": "RUNE_USDT level_2 TA_S2 AUTO",
+            "id": 6558687
+          }
+        ]
+      },
+      {
+        "name": "level_3",
+        "quote": "USD",
+        "pair_number": 3,
+        "coins": [
+          "DOGE"
+        ],
+        "bots": [
+          {
+            "coin": "DOGE",
+            "name": "DOGE_USD level_3 TA_S2 AUTO",
+            "id": 6558866
           },
           {
-            "name": "AXS",
-            "number": 1,
-            "bots": [
-              {
-                "name": "AXS_USD FALTS TA_S2 AUTO",
-                "id": 6515496,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "DOGE",
+            "name": "DOGE_USD level_3 TA_S2 AUTO",
+            "id": 6558867
           },
           {
-            "name": "RUNE",
-            "number": 5,
-            "bots": [
-              {
-                "name": "RUNE_USD FALTS TA_S2 AUTO",
-                "id": 6515497,
-                "stats": "enabled"
-              },
-              {
-                "name": "RUNE_USD FALTS TA_S2 AUTO",
-                "id": 6515498,
-                "stats": "enabled"
-              },
-              {
-                "name": "RUNE_USD FALTS TA_S2 AUTO",
-                "id": 6515499,
-                "stats": "enabled"
-              },
-              {
-                "name": "RUNE_USD FALTS TA_S2 AUTO",
-                "id": 6515500,
-                "stats": "enabled"
-              },
-              {
-                "name": "RUNE_USD FALTS TA_S2 AUTO",
-                "id": 6515501,
-                "stats": "enabled"
-              }
-            ]
-          },
-          {
-            "name": "SRM",
-            "number": 1,
-            "bots": [
-              {
-                "name": "SRM_USD FALTS TA_S2 AUTO",
-                "id": 6515502,
-                "stats": "enabled"
-              }
-            ]
+            "coin": "DOGE",
+            "name": "DOGE_USD level_3 TA_S2 AUTO",
+            "id": 6558868
           }
         ]
       }

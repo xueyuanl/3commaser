@@ -5,3 +5,7 @@ BOT_LIST = [
     # 6423889,  # MULTI/USD SALTS TAS1
     # 6424201   # MULTI/USD FALTS TASC1 P1
 ]
+
+
+# API_KEY = ''
+# SECRET = ''

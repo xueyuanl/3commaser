@@ -44,6 +44,9 @@ class ThreeCommas(object):
         try:
             response = self._session.get(url)
             rep = Response(response)
+            if not rep.ok:
+                logger_.error(rep.data)
+                raise
             return rep
         except Exception as e:
             raise e
@@ -61,6 +64,9 @@ class ThreeCommas(object):
         try:
             response = self._session.post(url, json=kwargs)
             rep = Response(response)
+            if not rep.ok:
+                logger_.error(rep.data)
+                raise
             return rep
         except Exception as e:
             raise e
@@ -118,4 +124,3 @@ class ThreeCommas(object):
     def bot_delete(self, **kwargs):
         endpoint = BOT_DELETE.replace('{bot_id}', str(kwargs['bot_id']))
         return self._post(endpoint, **kwargs)
-
