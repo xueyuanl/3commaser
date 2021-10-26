@@ -5,75 +5,23 @@
         "name": "level_1",
         "quote": "USD",
         "pair_number": 1,
-        "coins": [
-          "DOGE"
-        ],
-        "bots": [
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USD level 1 TA_S1 AUTO",
-            "id": 6558608
-          },
-          {
-            "coin": "RUNE",
-            "name": "RUNE_USD level_1 TA_S2 AUTO",
-            "id": 6558685
-          }
-        ]
+        "coins": ["BTC", "ETH"],
+        "bots": []
       },
       {
         "name": "level_2",
         "quote": "USD",
         "pair_number": 2,
-        "coins": [
-          "DOGE"
-        ],
+        "coins": ["DOGE"],
         "bots": [
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USDT level 2 TA_S1 AUTO",
-            "id": 6558614
-          },
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USDT level 2 TA_S1 AUTO",
-            "id": 6558615
-          },
-          {
-            "coin": "RUNE",
-            "name": "RUNE_USDT level_2 TA_S2 AUTO",
-            "id": 6558686
-          },
-          {
-            "coin": "RUNE",
-            "name": "RUNE_USDT level_2 TA_S2 AUTO",
-            "id": 6558687
-          }
         ]
       },
       {
         "name": "level_3",
         "quote": "USD",
         "pair_number": 3,
-        "coins": [
-          "DOGE"
-        ],
+        "coins": [],
         "bots": [
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USD level_3 TA_S2 AUTO",
-            "id": 6558866
-          },
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USD level_3 TA_S2 AUTO",
-            "id": 6558867
-          },
-          {
-            "coin": "DOGE",
-            "name": "DOGE_USD level_3 TA_S2 AUTO",
-            "id": 6558868
-          }
         ]
       }
     ]

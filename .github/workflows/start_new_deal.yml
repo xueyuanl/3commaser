@@ -4,8 +4,8 @@ on:
 #  push:
 #    branches:
 #      - master
-  schedule:
-    - cron: '*/5 * * * *' # every 5 minute
+#  schedule:
+#    - cron: '*/5 * * * *' # every 5 minute
 
 jobs:
   start_deals:
