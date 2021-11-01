@@ -21,8 +21,8 @@ class Bot(object):
 
 
 class BotSpec(object):
-    def __init__(self, account, coin, quote, level, Preset):
-        self.name = '{}_{} {} {} AUTO'.format(coin, quote, level, Preset.__name__)
+    def __init__(self, account, coin, quote, group_name, Preset):
+        self.name = '{}/{} {} {} AUTO'.format(coin, quote, group_name, Preset.__name__)
         self.account = account
         self.coin = coin
         self.quote = quote
@@ -32,7 +32,8 @@ class BotSpec(object):
 def update_bots(target_number, bot_list, bot_spec):
     # open existing bots anyway
     for b in bot_list:
-        threec.bot_enable(bot_id=b['id'])
+        res = threec.bot_enable(bot_id=b['id'])
+        logger_.info('open bot {}, id: {}'.format(b['name'], b['id']))
 
     # open additional bots
     open_bot_number = target_number - len(bot_list)
@@ -40,8 +41,8 @@ def update_bots(target_number, bot_list, bot_spec):
     for i in range(0, open_bot_number):
         res = create_bot(bot_spec)  # create
         threec.bot_enable(bot_id=res.data['id'])  # enable
-        bot = {'coin': bot_spec.coin, 'name': res.data['name'], 'id': res.data['id']}
-        logger_.info('open bot {}, id: {}'.format(bot['name'], bot['id']))
+        bot = {'coin': bot_spec.coin, 'name': res.data['name'], 'id': res.data['id'], 'state': Bot.ENABLED}
+        logger_.info('create bot {}, id: {}'.format(bot['name'], bot['id']))
         new_added_bots.append(bot)
     return new_added_bots
 
@@ -75,26 +76,22 @@ def create_bot(spec):
     return res
 
 
-def clean_bots(data):
-    logger_.info('start to clean disabled bots')
+def disable_bots(data):
+    logger_.info('start to disable bots for deleted pairs')
     for exchange_name, e in data.items():
         for g in e['groups']:
-            keep_bots = []
             for b in g['bots']:
                 coin_name = b['coin']
                 if coin_name not in g['coins']:
                     # disable all bots anyway
-                    threec.bot_disable(bot_id=b['id'])
-                    bot_info = threec.bot_info(bot_id=b['id'])
-                    if bot_info.status_code == 404:  # bot might be delete manually
+                    res = threec.bot_disable(bot_id=b['id'])
+                    if res.status_code == 404:  # bot might be delete manually
                         logger_.error('can not find bot {}, id: {}'.format(b['name'], b['id']))
                         continue
-                    if bot_info.data['deletable?']:
-                        logger_.info('delete bot {} in exchange {}, id: {}'.format(b['name'], exchange_name, b['id']))
-                        threec.bot_delete(bot_id=b['id'])
-                    else:
-                        keep_bots.append(b)
-                else:
-                    keep_bots.append(b)
-            g['bots'] = keep_bots
+                    logger_.info('disabled bot {}, id: {}'.format(b['name'], b['id']))
+                    b['state'] = Bot.DISABLED
 
+
+def clean_bots():
+    # delete deletable bots
+    pass

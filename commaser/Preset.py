@@ -17,7 +17,7 @@ class Size2(object):
     safety_order_volume = 40
 
 
-class TA_S1(BasePreset, Size1):
+class TAS1(BasePreset, Size1):
     max_safety_orders = 25
     safety_order_step_percentage = 2.4
 
@@ -25,7 +25,7 @@ class TA_S1(BasePreset, Size1):
     martingale_step_coefficient = 1
 
 
-class HF_S1(BasePreset, Size1):
+class HFS1(BasePreset, Size1):
     max_safety_orders = 25
     safety_order_step_percentage = 0.24
 
@@ -33,7 +33,7 @@ class HF_S1(BasePreset, Size1):
     martingale_step_coefficient = 1
 
 
-class TA_S2(BasePreset, Size2):
+class TAS2(BasePreset, Size2):
     max_safety_orders = 25
     safety_order_step_percentage = 2.4
 
@@ -42,8 +42,8 @@ class TA_S2(BasePreset, Size2):
 
 
 presets = {
-    TA_S1.__name__: TA_S1,
-    TA_S2.__name__: TA_S2,
-    HF_S1.__name__: HF_S1,
+    TAS1.__name__: TAS1,
+    TAS2.__name__: TAS2,
+    HFS1.__name__: HFS1,
 
 }

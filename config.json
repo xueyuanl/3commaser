@@ -1,27 +1,238 @@
 {
-  "FTX3commas": {
+  "FTX": {
     "groups": [
       {
-        "name": "level_1",
+        "name": "L1",
         "quote": "USD",
         "pair_number": 1,
-        "coins": ["BTC", "ETH"],
-        "bots": []
-      },
-      {
-        "name": "level_2",
-        "quote": "USD",
-        "pair_number": 2,
-        "coins": ["DOGE"],
+        "coins": [
+          "MANA",
+          "SAND",
+          "SUSHI"
+        ],
         "bots": [
+          {
+            "coin": "BTC",
+            "name": "BTC/USD L1 TAS2 AUTO",
+            "id": 6686509,
+            "state": "disabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L1 TAS2 AUTO",
+            "id": 6687103,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L1 TAS2 AUTO",
+            "id": 6687105,
+            "state": "enabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/USD L1 TAS2 AUTO",
+            "id": 6696938,
+            "state": "enabled"
+          }
         ]
       },
       {
-        "name": "level_3",
+        "name": "L2",
+        "quote": "USD",
+        "pair_number": 2,
+        "coins": [
+          "MANA",
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L2 TAS2 AUTO",
+            "id": 6687401,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L2 TAS2 AUTO",
+            "id": 6687403,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L2 TAS2 AUTO",
+            "id": 6687404,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L2 TAS2 AUTO",
+            "id": 6687405,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L3",
         "quote": "USD",
         "pair_number": 3,
-        "coins": [],
+        "coins": [
+          "MANA",
+          "SAND"
+        ],
         "bots": [
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L3 TAS2 AUTO",
+            "id": 6694265,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L3 TAS2 AUTO",
+            "id": 6694267,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/USD L3 TAS2 AUTO",
+            "id": 6694268,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L3 TAS2 AUTO",
+            "id": 6694269,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L3 TAS2 AUTO",
+            "id": 6694270,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L3 TAS2 AUTO",
+            "id": 6694271,
+            "state": "enabled"
+          }
+        ]
+      }
+    ]
+  },
+  "Binance": {
+    "groups": [
+      {
+        "name": "L1",
+        "quote": "BUSD",
+        "pair_number": 1,
+        "coins": [
+          "MANA",
+          "SAND",
+          "SUSHI"
+        ],
+        "bots": [
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L1 TAS2 AUTO",
+            "id": 6693226,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L1 TAS2 AUTO",
+            "id": 6693227,
+            "state": "enabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/BUSD L1 TAS2 AUTO",
+            "id": 6696941,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L2",
+        "quote": "BUSD",
+        "pair_number": 2,
+        "coins": [
+          "MANA",
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L2 TAS2 AUTO",
+            "id": 6693228,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L2 TAS2 AUTO",
+            "id": 6693229,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L2 TAS2 AUTO",
+            "id": 6693230,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L2 TAS2 AUTO",
+            "id": 6693233,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L3",
+        "quote": "BUSD",
+        "pair_number": 3,
+        "coins": [
+          "MANA",
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "id": 6694273,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "id": 6694274,
+            "state": "enabled"
+          },
+          {
+            "coin": "MANA",
+            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "id": 6694275,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "id": 6694276,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "id": 6694277,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "id": 6694278,
+            "state": "enabled"
+          }
         ]
       }
     ]
