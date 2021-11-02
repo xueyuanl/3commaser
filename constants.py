@@ -6,6 +6,7 @@ BOT_LIST = [
     # 6424201   # MULTI/USD FALTS TASC1 P1
 ]
 
+DEFAULT_STRATEGY = 'TAC1'
 
 # API_KEY = ''
 # SECRET = ''

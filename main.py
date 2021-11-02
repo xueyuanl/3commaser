@@ -1,7 +1,7 @@
 import os
 
 from commasapi.api import ThreeCommas
-from config import *
+from constants import *
 from log import logger_
 
 key = os.getenv('API_KEY')

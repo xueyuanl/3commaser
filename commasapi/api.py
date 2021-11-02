@@ -71,6 +71,26 @@ class ThreeCommas(object):
         except Exception as e:
             raise e
 
+    def _patch(self, endpoint, **kwargs):
+        path = PUBLIC_API + API_VERSION + endpoint
+        signature = self._generate_signature(path, data=json.dumps(kwargs))
+        headers = {
+            'APIKEY': self.key,
+            'Signature': signature
+        }
+        self._session.headers.update(headers)
+        url = '{}{}'.format(self.base_url, path)
+        self._logger.info('calling POST api: {}'.format(url))
+        try:
+            response = self._session.patch(url, json=kwargs)
+            rep = Response(response)
+            if not rep.ok:
+                logger_.error(rep.data)
+                raise
+            return rep
+        except Exception as e:
+            raise e
+
     def _make_path(self, endpoint, **kwargs):
         path = PUBLIC_API + API_VERSION + endpoint
         params = ''
@@ -108,6 +128,10 @@ class ThreeCommas(object):
 
     def bot_create(self, **kwargs):
         return self._post(BOT_CREATE, **kwargs)
+
+    def bot_edit(self, **kwargs):
+        endpoint = BOT_EDIT.replace('{bot_id}', str(kwargs['bot_id']))
+        return self._patch(endpoint, **kwargs)
 
     def bot_info(self, **kwargs):
         endpoint = BOT_INFO.replace('{bot_id}', str(kwargs['bot_id']))

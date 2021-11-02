@@ -21,12 +21,13 @@ class Bot(object):
 
 
 class BotSpec(object):
-    def __init__(self, account, coin, quote, group_name, Preset):
-        self.name = '{}/{} {} {} AUTO'.format(coin, quote, group_name, Preset.__name__)
-        self.account = account
+    def __init__(self, coin, quote, group_name, strategy, account=None, id_=None):
+        self.name = '{}/{} {} {} AUTO'.format(coin, quote, group_name, strategy.code)
         self.coin = coin
         self.quote = quote
-        self.Preset = Preset
+        self.strategy = strategy
+        self.account = account
+        self.id = id_
 
 
 def update_bots(target_number, bot_list, bot_spec):
@@ -34,6 +35,7 @@ def update_bots(target_number, bot_list, bot_spec):
     for b in bot_list:
         res = threec.bot_enable(bot_id=b['id'])
         logger_.info('open bot {}, id: {}'.format(b['name'], b['id']))
+        b['state'] = Bot.ENABLED
 
     # open additional bots
     open_bot_number = target_number - len(bot_list)
@@ -51,21 +53,21 @@ def create_bot(spec):
     account = spec.account
     coin = spec.coin
     quote = spec.quote
-    Preset = spec.Preset
+    strategy = spec.strategy
     pair = quote + '_' + coin
     data = {'name': spec.name,
             'account_id': account.id_,
             'pairs': [pair],  # USDT_BTC
-            'base_order_volume': Preset.base_order_volume,  # 10
-            'take_profit': Preset.take_profit,  # 1.25
-            'safety_order_volume': Preset.safety_order_volume,  # 20
-            'martingale_volume_coefficient': Preset.martingale_volume_coefficient,  # 1.05
-            'martingale_step_coefficient': Preset.martingale_step_coefficient,  # 1
-            'max_safety_orders': Preset.max_safety_orders,  # 25
-            'active_safety_orders_count': Preset.active_safety_orders_count,  # 1
-            'safety_order_step_percentage': Preset.safety_order_step_percentage,  # 2.4
-            'take_profit_type': Preset.take_profit_type,  # total
-            'strategy_list': Preset.strategy_list  # [{"strategy": "nonstop"}]
+            'base_order_volume': strategy.base_order_volume,  # 10
+            'take_profit': strategy.take_profit,  # 1.25
+            'safety_order_volume': strategy.safety_order_volume,  # 20
+            'martingale_volume_coefficient': strategy.martingale_volume_coefficient,  # 1.05
+            'martingale_step_coefficient': strategy.martingale_step_coefficient,  # 1
+            'max_safety_orders': strategy.max_safety_orders,  # 25
+            'active_safety_orders_count': strategy.active_safety_orders_count,  # 1
+            'safety_order_step_percentage': strategy.safety_order_step_percentage,  # 2.4
+            'take_profit_type': strategy.take_profit_type,  # total
+            'strategy_list': strategy.strategy_list  # [{"strategy": "nonstop"}]
             }
     logger_.info('create bot data info: {}'.format(data))
     res = threec.bot_create(**data)
@@ -73,6 +75,38 @@ def create_bot(spec):
         logger_.info('successfully create bot {}, id: {}'.format(res.data['name'], res.data['id']))
     else:
         logger_.error('fail to create bot for account {}, account id: {}'.format(account.name, account.id_))
+    return res
+
+
+def edit_bot(spec):
+    coin = spec.coin
+    if not spec.id:
+        logger_.error('need bot id to edit')
+        raise Exception('no id found')
+    bot_id = spec.id
+    quote = spec.quote
+    strategy = spec.strategy
+    pair = quote + '_' + coin
+    data = {'name': spec.name,
+            'bot_id': bot_id,
+            'pairs': [pair],  # USDT_BTC
+            'base_order_volume': strategy.base_order_volume,  # 10
+            'take_profit': strategy.take_profit,  # 1.25
+            'safety_order_volume': strategy.safety_order_volume,  # 20
+            'martingale_volume_coefficient': strategy.martingale_volume_coefficient,  # 1.05
+            'martingale_step_coefficient': strategy.martingale_step_coefficient,  # 1
+            'max_safety_orders': strategy.max_safety_orders,  # 25
+            'active_safety_orders_count': strategy.active_safety_orders_count,  # 1
+            'safety_order_step_percentage': strategy.safety_order_step_percentage,  # 2.4
+            'take_profit_type': strategy.take_profit_type,  # total
+            'strategy_list': strategy.strategy_list  # [{"strategy": "nonstop"}]
+            }
+    logger_.info('create bot data info: {}'.format(data))
+    res = threec.bot_edit(**data)
+    if res.ok:
+        logger_.info('successfully update bot {}, id: {}'.format(res.data['name'], res.data['id']))
+    else:
+        logger_.error('fail to update bot {}, id: {}'.format(res.data['name'], res.data['id']))
     return res
 
 
@@ -94,4 +128,9 @@ def disable_bots(data):
 
 def clean_bots():
     # delete deletable bots
+    pass
+
+
+def sync_bot_settings():
+    # update preset, name
     pass

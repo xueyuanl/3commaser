@@ -41,6 +41,23 @@ class TAS2(BasePreset, Size2):
     martingale_step_coefficient = 1
 
 
+class Strategy(object):
+    def __init__(self, code, **kwargs):
+        self.code = code
+        self.take_profit = kwargs.get('TP', 1.5)
+        self.base_order_volume = kwargs['BO']
+        self.safety_order_volume = kwargs['SO']
+        self.max_safety_orders = kwargs['MSTC']
+        self.safety_order_step_percentage = kwargs['SOS']
+        self.martingale_volume_coefficient = kwargs['OS']
+        self.martingale_step_coefficient = kwargs['SS']
+        # some default values
+        self.take_profit_type = 'total'
+        self.active_safety_orders_count = 1
+        self.strategy_list = [{"strategy": "nonstop"}]
+        self.start_order_type = 'limit'
+
+
 presets = {
     TAS1.__name__: TAS1,
     TAS2.__name__: TAS2,

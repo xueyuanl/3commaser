@@ -8,31 +8,45 @@
         "coins": [
           "MANA",
           "SAND",
-          "SUSHI"
+          "SUSHI",
+          "LRC",
+          "ENJ"
         ],
         "bots": [
           {
             "coin": "BTC",
-            "name": "BTC/USD L1 TAS2 AUTO",
+            "name": "BTC/USD L1 TAC1 AUTO",
             "id": 6686509,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD L1 TAS2 AUTO",
+            "name": "MANA/USD L1 TAC1 AUTO",
             "id": 6687103,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L1 TAS2 AUTO",
+            "name": "SAND/USD L1 TAC1 AUTO",
             "id": 6687105,
             "state": "enabled"
           },
           {
             "coin": "SUSHI",
-            "name": "SUSHI/USD L1 TAS2 AUTO",
+            "name": "SUSHI/USD L1 TAC1 AUTO",
             "id": 6696938,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/USD L1 TAC1 AUTO",
+            "id": 6706449,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENJ",
+            "name": "ENJ/USD L1 TAC1 AUTO",
+            "id": 6707411,
             "state": "enabled"
           }
         ]
@@ -43,31 +57,44 @@
         "pair_number": 2,
         "coins": [
           "MANA",
-          "SAND"
+          "SAND",
+          "LRC"
         ],
         "bots": [
           {
             "coin": "MANA",
-            "name": "MANA/USD L2 TAS2 AUTO",
+            "name": "MANA/USD L2 TAC1 AUTO",
             "id": 6687401,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD L2 TAS2 AUTO",
+            "name": "MANA/USD L2 TAC1 AUTO",
             "id": 6687403,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L2 TAS2 AUTO",
+            "name": "SAND/USD L2 TAC1 AUTO",
             "id": 6687404,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L2 TAS2 AUTO",
+            "name": "SAND/USD L2 TAC1 AUTO",
             "id": 6687405,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/USD L2 TAC1 AUTO",
+            "id": 6706450,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/USD L2 TAC1 AUTO",
+            "id": 6706451,
             "state": "enabled"
           }
         ]
@@ -83,39 +110,111 @@
         "bots": [
           {
             "coin": "MANA",
-            "name": "MANA/USD L3 TAS2 AUTO",
+            "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694265,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD L3 TAS2 AUTO",
+            "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694267,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD L3 TAS2 AUTO",
+            "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694268,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L3 TAS2 AUTO",
+            "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694269,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L3 TAS2 AUTO",
+            "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694270,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD L3 TAS2 AUTO",
+            "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694271,
             "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L4",
+        "quote": "USD",
+        "pair_number": 4,
+        "coins": [
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L4 TAC1 AUTO",
+            "id": 6707035,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L4 TAC1 AUTO",
+            "id": 6707036,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L4 TAC1 AUTO",
+            "id": 6707037,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L4 TAC1 AUTO",
+            "id": 6707038,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L5",
+        "quote": "USD",
+        "pair_number": 5,
+        "coins": [],
+        "bots": [
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L5 TAC1 AUTO",
+            "id": 6707039,
+            "state": "disabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L5 TAC1 AUTO",
+            "id": 6707040,
+            "state": "disabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L5 TAC1 AUTO",
+            "id": 6707041,
+            "state": "disabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L5 TAC1 AUTO",
+            "id": 6707043,
+            "state": "disabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/USD L5 TAC1 AUTO",
+            "id": 6707044,
+            "state": "disabled"
           }
         ]
       }
@@ -130,25 +229,39 @@
         "coins": [
           "MANA",
           "SAND",
-          "SUSHI"
+          "SUSHI",
+          "LRC",
+          "ENJ"
         ],
         "bots": [
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L1 TAS2 AUTO",
+            "name": "MANA/BUSD L1 TAC1 AUTO",
             "id": 6693226,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L1 TAS2 AUTO",
+            "name": "SAND/BUSD L1 TAC1 AUTO",
             "id": 6693227,
             "state": "enabled"
           },
           {
             "coin": "SUSHI",
-            "name": "SUSHI/BUSD L1 TAS2 AUTO",
+            "name": "SUSHI/BUSD L1 TAC1 AUTO",
             "id": 6696941,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/BUSD L1 TAC1 AUTO",
+            "id": 6706453,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENJ",
+            "name": "ENJ/BUSD L1 TAC1 AUTO",
+            "id": 6707412,
             "state": "enabled"
           }
         ]
@@ -159,31 +272,44 @@
         "pair_number": 2,
         "coins": [
           "MANA",
-          "SAND"
+          "SAND",
+          "LRC"
         ],
         "bots": [
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L2 TAS2 AUTO",
+            "name": "MANA/BUSD L2 TAC1 AUTO",
             "id": 6693228,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L2 TAS2 AUTO",
+            "name": "MANA/BUSD L2 TAC1 AUTO",
             "id": 6693229,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L2 TAS2 AUTO",
+            "name": "SAND/BUSD L2 TAC1 AUTO",
             "id": 6693230,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L2 TAS2 AUTO",
+            "name": "SAND/BUSD L2 TAC1 AUTO",
             "id": 6693233,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/BUSD L2 TAC1 AUTO",
+            "id": 6706455,
+            "state": "enabled"
+          },
+          {
+            "coin": "LRC",
+            "name": "LRC/BUSD L2 TAC1 AUTO",
+            "id": 6706456,
             "state": "enabled"
           }
         ]
@@ -199,38 +325,112 @@
         "bots": [
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694273,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694274,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD L3 TAS2 AUTO",
+            "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694275,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694276,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694277,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD L3 TAS2 AUTO",
+            "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694278,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L4",
+        "quote": "BUSD",
+        "pair_number": 4,
+        "coins": [
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L4 TAC1 AUTO",
+            "id": 6705287,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L4 TAC1 AUTO",
+            "id": 6705288,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L4 TAC1 AUTO",
+            "id": 6705289,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L4 TAC1 AUTO",
+            "id": 6705290,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L5",
+        "quote": "BUSD",
+        "pair_number": 5,
+        "coins": [
+          "SAND"
+        ],
+        "bots": [
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L5 TAC1 AUTO",
+            "id": 6706935,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L5 TAC1 AUTO",
+            "id": 6706937,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L5 TAC1 AUTO",
+            "id": 6706939,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L5 TAC1 AUTO",
+            "id": 6706940,
+            "state": "enabled"
+          },
+          {
+            "coin": "SAND",
+            "name": "SAND/BUSD L5 TAC1 AUTO",
+            "id": 6706941,
             "state": "enabled"
           }
         ]

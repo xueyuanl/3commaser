@@ -1,0 +1,88 @@
+{
+  "TA": {
+    "name": "TA safer setting",
+    "TP": 1.5,
+    "BO": 10,
+    "SO": 10,
+    "MSTC": 25,
+    "SOS": 2.4,
+    "OS": 1.05,
+    "SS": 1,
+    "info": {
+      "budget": 500,
+      "coverage": 60
+    }
+  },
+  "TAS1": {
+    "name": "TA standard 1 setting",
+    "TP": 1.5,
+    "BO": 10,
+    "SO": 20,
+    "MSTC": 25,
+    "SOS": 2.4,
+    "OS": 1.05,
+    "SS": 1,
+    "info": {
+      "budget": 970,
+      "coverage": 60
+    }
+  },
+  "TAS2": {
+    "name": "TA standard 2 setting",
+    "TP": 1.5,
+    "BO": 10,
+    "SO": 20,
+    "MSTC": 30,
+    "SOS": 2,
+    "OS": 1.05,
+    "SS": 1,
+    "info": {
+      "budget": 1400,
+      "coverage": 60
+    }
+  },
+  "URMAv3": {
+    "name": "Urma lite v3",
+    "TP": 1.5,
+    "BO": 10,
+    "SO": 20,
+    "MSTC": 30,
+    "SOS": 2,
+    "OS": 1.05,
+    "SS": 1,
+    "info": {
+      "budget": 500,
+      "coverage": 60.16
+    }
+  },
+  "MIZUv2": {
+    "name": "Mizukage v2",
+    "TP": 1.25,
+    "BO": 100,
+    "SO": 10,
+    "MSTC": 100,
+    "SOS": 0.6,
+    "OS": 1,
+    "SS": 1,
+    "info": {
+      "budget": 1189,
+      "coverage": 60,
+      "request_change": 70.73
+    }
+  },
+  "TAC1":{
+    "name": "TA custom 1 setting",
+    "TP": 1.5,
+    "BO": 20,
+    "SO": 40,
+    "MSTC": 25,
+    "SOS": 2.4,
+    "OS": 1.05,
+    "SS": 1,
+    "info": {
+      "budget": 1950,
+      "coverage": 60,
+      "request_change": 49.6
+    }
+  }
+}

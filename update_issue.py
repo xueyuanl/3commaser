@@ -147,7 +147,7 @@ def main():
             for coin in e['coins']:
                 coin_name = coin['name']
                 exchange = Account(exchange_name, id_)
-                bot_spec = BotSpec(exchange, coin_name, quote, v['coin_level'], presets[v['name']])
+                bot_spec = BotSpec(coin_name, quote, v['coin_level'], presets[v['name']], account=exchange)
                 update_bots(coin, bot_spec)
 
     # record back to issue
