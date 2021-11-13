@@ -33,6 +33,9 @@ class BotSpec(object):
 def update_bots(target_number, bot_list, bot_spec):
     # open existing bots anyway
     for b in bot_list:
+        if 'state' in b and b['state'] == Bot.ENABLED:
+            logger_.info('already opened bot {}, id: {}'.format(b['name'], b['id']))
+            continue
         res = threec.bot_enable(bot_id=b['id'])
         logger_.info('open bot {}, id: {}'.format(b['name'], b['id']))
         b['state'] = Bot.ENABLED
@@ -55,20 +58,7 @@ def create_bot(spec):
     quote = spec.quote
     strategy = spec.strategy
     pair = quote + '_' + coin
-    data = {'name': spec.name,
-            'account_id': account.id_,
-            'pairs': [pair],  # USDT_BTC
-            'base_order_volume': strategy.base_order_volume,  # 10
-            'take_profit': strategy.take_profit,  # 1.25
-            'safety_order_volume': strategy.safety_order_volume,  # 20
-            'martingale_volume_coefficient': strategy.martingale_volume_coefficient,  # 1.05
-            'martingale_step_coefficient': strategy.martingale_step_coefficient,  # 1
-            'max_safety_orders': strategy.max_safety_orders,  # 25
-            'active_safety_orders_count': strategy.active_safety_orders_count,  # 1
-            'safety_order_step_percentage': strategy.safety_order_step_percentage,  # 2.4
-            'take_profit_type': strategy.take_profit_type,  # total
-            'strategy_list': strategy.strategy_list  # [{"strategy": "nonstop"}]
-            }
+    data = _generate_bot_data(spec.name, pair, strategy, account_id=account.id_)
     logger_.info('create bot data info: {}'.format(data))
     res = threec.bot_create(**data)
     if res.ok:
@@ -87,20 +77,7 @@ def edit_bot(spec):
     quote = spec.quote
     strategy = spec.strategy
     pair = quote + '_' + coin
-    data = {'name': spec.name,
-            'bot_id': bot_id,
-            'pairs': [pair],  # USDT_BTC
-            'base_order_volume': strategy.base_order_volume,  # 10
-            'take_profit': strategy.take_profit,  # 1.25
-            'safety_order_volume': strategy.safety_order_volume,  # 20
-            'martingale_volume_coefficient': strategy.martingale_volume_coefficient,  # 1.05
-            'martingale_step_coefficient': strategy.martingale_step_coefficient,  # 1
-            'max_safety_orders': strategy.max_safety_orders,  # 25
-            'active_safety_orders_count': strategy.active_safety_orders_count,  # 1
-            'safety_order_step_percentage': strategy.safety_order_step_percentage,  # 2.4
-            'take_profit_type': strategy.take_profit_type,  # total
-            'strategy_list': strategy.strategy_list  # [{"strategy": "nonstop"}]
-            }
+    data = _generate_bot_data(spec.name, pair, strategy, bot_id=bot_id)
     logger_.info('create bot data info: {}'.format(data))
     res = threec.bot_edit(**data)
     if res.ok:
@@ -117,13 +94,15 @@ def disable_bots(data):
             for b in g['bots']:
                 coin_name = b['coin']
                 if coin_name not in g['coins']:
-                    # disable all bots anyway
-                    res = threec.bot_disable(bot_id=b['id'])
-                    if res.status_code == 404:  # bot might be delete manually
-                        logger_.error('can not find bot {}, id: {}'.format(b['name'], b['id']))
-                        continue
-                    logger_.info('disabled bot {}, id: {}'.format(b['name'], b['id']))
-                    b['state'] = Bot.DISABLED
+                    if b['state'] == Bot.ENABLED:
+                        res = threec.bot_disable(bot_id=b['id'])
+                        if res.status_code == 404:  # bot might be delete manually
+                            logger_.error('can not find bot {}, id: {}'.format(b['name'], b['id']))
+                            continue
+                        logger_.info('disabled bot {}, id: {}'.format(b['name'], b['id']))
+                        b['state'] = Bot.DISABLED
+                    else:
+                        logger_.info('already disabled bot {}, id: {}'.format(b['name'], b['id']))
 
 
 def clean_bots():
@@ -134,3 +113,25 @@ def clean_bots():
 def sync_bot_settings():
     # update preset, name
     pass
+
+
+def _generate_bot_data(name, pair, strategy, **kwargs):
+    data = {'name': name,
+            'pairs': [pair],  # USDT_BTC
+            'base_order_volume': strategy.base_order_volume,  # 10
+            'take_profit': strategy.take_profit,  # 1.25
+            'safety_order_volume': strategy.safety_order_volume,  # 20
+            'martingale_volume_coefficient': strategy.martingale_volume_coefficient,  # 1.05
+            'martingale_step_coefficient': strategy.martingale_step_coefficient,  # 1
+            'max_safety_orders': strategy.max_safety_orders,  # 25
+            'active_safety_orders_count': strategy.active_safety_orders_count,  # 1
+            'safety_order_step_percentage': strategy.safety_order_step_percentage,  # 2.4
+            'take_profit_type': strategy.take_profit_type,  # total
+            'strategy_list': strategy.strategy_list,  # [{"strategy": "nonstop"}]
+            'disable_after_deals_count': strategy.disable_after_deals_count
+            }
+    if 'account_id' in kwargs:
+        data['account_id'] = kwargs['account_id']
+    if 'bot_id' in kwargs:
+        data['bot_id'] = kwargs['bot_id']
+    return data

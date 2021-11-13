@@ -6,6 +6,7 @@ from commaser.account import Account, get_account_id
 from commaser.bot import BotSpec, update_bots, disable_bots, edit_bot
 from log import logger_
 from constants import DEFAULT_STRATEGY
+from commaser.threecommas import threec
 
 def check_key(key, map_, value):
     if key not in map_:
@@ -21,6 +22,7 @@ def get_args():
 
 
 def main():
+    # t = threec.bot_info(bot_id=6805525)
     args = get_args()
     with open('bot_strategies.json') as f:
         strategies = json.load(f)

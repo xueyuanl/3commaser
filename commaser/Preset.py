@@ -54,8 +54,10 @@ class Strategy(object):
         # some default values
         self.take_profit_type = 'total'
         self.active_safety_orders_count = 1
-        self.strategy_list = [{"strategy": "nonstop"}]
+        self.strategy_list = kwargs.get('strategy_list', [{"strategy": "nonstop"}])
         self.start_order_type = 'limit'
+
+        self.disable_after_deals_count = kwargs.get('disable_after_deals_count', None)
 
 
 presets = {

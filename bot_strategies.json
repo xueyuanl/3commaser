@@ -41,6 +41,66 @@
       "coverage": 60
     }
   },
+  "TAC1": {
+    "name": "TA custom 1 setting",
+    "TP": 1.5,
+    "BO": 20,
+    "SO": 40,
+    "OS": 1.05,
+    "SS": 1,
+    "SOS": 2.4,
+    "MSTC": 25,
+    "info": {
+      "budget": 1950,
+      "coverage": 60,
+      "request_change": 49.6
+    }
+  },
+  "TAC2": {
+    "name": "TA custom 2 setting",
+    "TP": 1.5,
+    "BO": 20,
+    "SO": 40,
+    "OS": 1.05,
+    "SS": 1,
+    "SOS": 2,
+    "MSTC": 30,
+    "info": {
+      "budget": 2700,
+      "coverage": 60,
+      "request_change": 46
+    }
+  },
+  "TASU": {
+    "name": "TA Strong Uptrend",
+    "TP": 3,
+    "BO": 10,
+    "SO": 10,
+    "OS": 1.4,
+    "SS": 1.23,
+    "SOS": 2,
+    "MSTC": 10,
+    "info": {
+      "budget": 708,
+      "coverage": 60.22,
+      "request_change": 41.39
+    }
+  },
+  "TADR": {
+    "name": "TA Deep Retracements",
+    "TP": 3,
+    "BO": 10,
+    "SO": 10,
+    "OS": 2,
+    "SS": 1.4,
+    "SOS": 2,
+    "MSTC": 8,
+    "info": {
+      "budget": 2560,
+      "coverage": 68.78,
+      "request_change": 36.6
+    }
+  },
   "URMAv3": {
     "name": "Urma lite v3",
     "TP": 1.5,
@@ -70,19 +130,91 @@
       "request_change": 70.73
     }
   },
-  "TAC1":{
-    "name": "TA custom 1 setting",
-    "TP": 1.5,
-    "BO": 20,
-    "SO": 40,
-    "MSTC": 25,
-    "SOS": 2.4,
+  "MIZUv3": {
+    "name": "Mizukage v3",
+    "TP": 3,
+    "BO": 100,
+    "SO": 10,
+    "MSTC": 100,
+    "SOS": 0.21,
+    "OS": 1,
+    "SS": 1.02,
+    "info": {
+      "budget": 1108,
+      "coverage": 65.56,
+      "request_change": 115.38
+    }
+  },
+  "MIZUv3.1": {
+    "name": "Mizukage v3.1",
+    "TP": 3,
+    "BO": 100,
+    "SO": 10,
+    "OS": 1,
+    "SS": 1.01,
+    "SOS": 0.35,
+    "MSTC": 100,
+    "info": {
+      "budget": 1108,
+      "coverage": 59.66,
+      "request_change": 84.31
+    }
+  },
+  "KIRIv3": {
+    "name": "Kirigakue v3",
+    "TP": 3,
+    "BO": 100,
+    "SO": 10,
+    "OS": 1.01,
+    "SS": 0.98,
+    "SOS": 1.5,
+    "MSTC": 75,
+    "info": {
+      "budget": 1209,
+      "coverage": 58.51,
+      "request_change": 45.1
+    }
+  },
+  "URMAHODL": {
+    "name": "URMA hold",
+    "TP": 20,
+    "BO": 100,
+    "SO": 100,
+    "OS": 1.4,
+    "SS": 1.5,
+    "SOS": 1.87,
+    "MSTC": 5,
+    "strategy_list": [
+      {
+        "strategy": "tv_custom_signal"
+      }
+    ],
+    "info": {
+      "budget": 1200,
+      "coverage": 24.66,
+      "request_change": 36,
+      "TV_signal": {
+        "message_type": "bot",
+        "bot_id": "change your bot id",
+        "email_token": "56da6263-29a4-4389-aa4e-e7dae6bef0e2",
+        "delay_seconds": 0
+      }
+    }
+  },
+  "TAH1": {
+    "name": "TA Hodl start now",
+    "TP": 40,
+    "BO": 50,
+    "SO": 100,
     "OS": 1.05,
     "SS": 1,
+    "SOS": 2,
+    "MSTC": 5,
+    "disable_after_deals_count": 1,
     "info": {
-      "budget": 1950,
-      "coverage": 60,
-      "request_change": 49.6
+      "budget": 600,
+      "coverage": 10,
+      "request_change": 25.6
     }
   }
 }

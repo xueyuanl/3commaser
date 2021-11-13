@@ -1,4 +1,39 @@
 {
+  "FTX_Main": {
+    "groups": [
+      {
+        "name": "HOLD1",
+        "quote": "USD",
+        "pair_number": 1,
+        "strategy": "TAH1",
+        "coins": [
+          "BAT",
+          "LINK",
+          "DOGE"
+        ],
+        "bots": [
+          {
+            "coin": "BAT",
+            "name": "BAT/USD HOLD1 TAH1 AUTO",
+            "id": 6851391,
+            "state": "enabled"
+          },
+          {
+            "coin": "LINK",
+            "name": "LINK/USD HOLD1 TAH1 AUTO",
+            "id": 6851762,
+            "state": "enabled"
+          },
+          {
+            "coin": "DOGE",
+            "name": "DOGE/USD HOLD1 TAH1 AUTO",
+            "id": 6875593,
+            "state": "enabled"
+          }
+        ]
+      }
+    ]
+  },
   "FTX": {
     "groups": [
       {
@@ -6,18 +41,23 @@
         "quote": "USD",
         "pair_number": 1,
         "coins": [
-          "MANA",
-          "SAND",
+          "BTC",
           "SUSHI",
-          "LRC",
-          "ENJ"
+          "ETH",
+          "SOL",
+          "MANA",
+          "DOGE",
+          "BAT",
+          "IMX",
+          "CHR",
+          "ENS"
         ],
         "bots": [
           {
             "coin": "BTC",
             "name": "BTC/USD L1 TAC1 AUTO",
             "id": 6686509,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "MANA",
@@ -29,7 +69,7 @@
             "coin": "SAND",
             "name": "SAND/USD L1 TAC1 AUTO",
             "id": 6687105,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SUSHI",
@@ -41,12 +81,66 @@
             "coin": "LRC",
             "name": "LRC/USD L1 TAC1 AUTO",
             "id": 6706449,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "ENJ",
             "name": "ENJ/USD L1 TAC1 AUTO",
             "id": 6707411,
+            "state": "disabled"
+          },
+          {
+            "coin": "ETH",
+            "name": "ETH/USD L1 TAC1 AUTO",
+            "id": 6741971,
+            "state": "enabled"
+          },
+          {
+            "coin": "SOL",
+            "name": "SOL/USD L1 TAC1 AUTO",
+            "id": 6741972,
+            "state": "enabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L1 TAC1 AUTO",
+            "id": 6752074,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/USD L1 TAC1 AUTO",
+            "id": 6769700,
+            "state": "enabled"
+          },
+          {
+            "coin": "IMX",
+            "name": "IMX/USD L1 TAC1 AUTO",
+            "id": 6778943,
+            "state": "enabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/USD L1 TAC1 AUTO",
+            "id": 6805785,
+            "state": "disabled"
+          },
+          {
+            "coin": "DOGE",
+            "name": "DOGE/USD L1 TAC1 AUTO",
+            "id": 6829108,
+            "state": "enabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/USD L1 TAC1 AUTO",
+            "id": 6837592,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L1 TAC1 AUTO",
+            "id": 6868458,
             "state": "enabled"
           }
         ]
@@ -56,9 +150,11 @@
         "quote": "USD",
         "pair_number": 2,
         "coins": [
-          "MANA",
-          "SAND",
-          "LRC"
+          "SUSHI",
+          "IMX",
+          "CHR",
+          "ENS",
+          "MANA"
         ],
         "bots": [
           {
@@ -77,24 +173,96 @@
             "coin": "SAND",
             "name": "SAND/USD L2 TAC1 AUTO",
             "id": 6687404,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L2 TAC1 AUTO",
             "id": 6687405,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "LRC",
             "name": "LRC/USD L2 TAC1 AUTO",
             "id": 6706450,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "LRC",
             "name": "LRC/USD L2 TAC1 AUTO",
             "id": 6706451,
+            "state": "disabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/USD L2 TAC1 AUTO",
+            "id": 6743429,
+            "state": "enabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/USD L2 TAC1 AUTO",
+            "id": 6743430,
+            "state": "enabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L2 TAC1 AUTO",
+            "id": 6752246,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L2 TAC1 AUTO",
+            "id": 6752247,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/USD L2 TAC1 AUTO",
+            "id": 6769701,
+            "state": "enabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/USD L2 TAC1 AUTO",
+            "id": 6769703,
+            "state": "enabled"
+          },
+          {
+            "coin": "IMX",
+            "name": "IMX/USD L2 TAC1 AUTO",
+            "id": 6778945,
+            "state": "enabled"
+          },
+          {
+            "coin": "IMX",
+            "name": "IMX/USD L2 TAC1 AUTO",
+            "id": 6778947,
+            "state": "enabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/USD L2 TAC1 AUTO",
+            "id": 6839993,
+            "state": "disabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/USD L2 TAC1 AUTO",
+            "id": 6839994,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L2 TAC1 AUTO",
+            "id": 6868460,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L2 TAC1 AUTO",
+            "id": 6868461,
             "state": "enabled"
           }
         ]
@@ -104,44 +272,79 @@
         "quote": "USD",
         "pair_number": 3,
         "coins": [
-          "MANA",
-          "SAND"
+          "ENS"
         ],
         "bots": [
           {
             "coin": "MANA",
             "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694265,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
             "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694267,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
             "name": "MANA/USD L3 TAC1 AUTO",
             "id": 6694268,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694269,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694270,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L3 TAC1 AUTO",
             "id": 6694271,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L3 TAC1 AUTO",
+            "id": 6755013,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L3 TAC1 AUTO",
+            "id": 6755014,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L3 TAC1 AUTO",
+            "id": 6755015,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L3 TAC1 AUTO",
+            "id": 6868463,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L3 TAC1 AUTO",
+            "id": 6868465,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L3 TAC1 AUTO",
+            "id": 6868466,
             "state": "enabled"
           }
         ]
@@ -151,31 +354,79 @@
         "quote": "USD",
         "pair_number": 4,
         "coins": [
-          "SAND"
+          "ENS"
         ],
         "bots": [
           {
             "coin": "SAND",
             "name": "SAND/USD L4 TAC1 AUTO",
             "id": 6707035,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L4 TAC1 AUTO",
             "id": 6707036,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L4 TAC1 AUTO",
             "id": 6707037,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD L4 TAC1 AUTO",
             "id": 6707038,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L4 TAC1 AUTO",
+            "id": 6768301,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L4 TAC1 AUTO",
+            "id": 6768302,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L4 TAC1 AUTO",
+            "id": 6768303,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/USD L4 TAC1 AUTO",
+            "id": 6768304,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L4 TAC1 AUTO",
+            "id": 6868468,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L4 TAC1 AUTO",
+            "id": 6868469,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L4 TAC1 AUTO",
+            "id": 6868470,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L4 TAC1 AUTO",
+            "id": 6868471,
             "state": "enabled"
           }
         ]
@@ -184,7 +435,9 @@
         "name": "L5",
         "quote": "USD",
         "pair_number": 5,
-        "coins": [],
+        "coins": [
+          "ENS"
+        ],
         "bots": [
           {
             "coin": "SAND",
@@ -215,6 +468,60 @@
             "name": "SAND/USD L5 TAC1 AUTO",
             "id": 6707044,
             "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L5 TAC1 AUTO",
+            "id": 6868473,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L5 TAC1 AUTO",
+            "id": 6868474,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L5 TAC1 AUTO",
+            "id": 6868475,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L5 TAC1 AUTO",
+            "id": 6868477,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/USD L5 TAC1 AUTO",
+            "id": 6868479,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "HOLD1",
+        "quote": "USD",
+        "pair_number": 1,
+        "strategy": "TAH1",
+        "coins": [
+          "IMX",
+          "LINK"
+        ],
+        "bots": [
+          {
+            "coin": "IMX",
+            "name": "IMX/USD HOLD1 TAH1 AUTO",
+            "id": 6835261,
+            "state": "enabled"
+          },
+          {
+            "coin": "LINK",
+            "name": "LINK/USD HOLD1 TAH1 AUTO",
+            "id": 6840829,
+            "state": "enabled"
           }
         ]
       }
@@ -227,24 +534,30 @@
         "quote": "BUSD",
         "pair_number": 1,
         "coins": [
-          "MANA",
-          "SAND",
+          "BTC",
           "SUSHI",
-          "LRC",
-          "ENJ"
+          "AR",
+          "ETH",
+          "AVAX",
+          "DOGE",
+          "LUNA",
+          "LPT",
+          "ENS",
+          "CHR",
+          "MASK"
         ],
         "bots": [
           {
             "coin": "MANA",
             "name": "MANA/BUSD L1 TAC1 AUTO",
             "id": 6693226,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L1 TAC1 AUTO",
             "id": 6693227,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SUSHI",
@@ -256,12 +569,138 @@
             "coin": "LRC",
             "name": "LRC/BUSD L1 TAC1 AUTO",
             "id": 6706453,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "ENJ",
             "name": "ENJ/BUSD L1 TAC1 AUTO",
             "id": 6707412,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD L1 TAC1 AUTO",
+            "id": 6735490,
+            "state": "enabled"
+          },
+          {
+            "coin": "ETH",
+            "name": "ETH/BUSD L1 TAC1 AUTO",
+            "id": 6741974,
+            "state": "enabled"
+          },
+          {
+            "coin": "SOL",
+            "name": "SOL/BUSD L1 TAC1 AUTO",
+            "id": 6741975,
+            "state": "disabled"
+          },
+          {
+            "coin": "ATOM",
+            "name": "ATOM/BUSD L1 TAC1 AUTO",
+            "id": 6741976,
+            "state": "disabled"
+          },
+          {
+            "coin": "AVAX",
+            "name": "AVAX/BUSD L1 TAC1 AUTO",
+            "id": 6741978,
+            "state": "enabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L1 TAC1 AUTO",
+            "id": 6746146,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L1 TAC1 AUTO",
+            "id": 6752249,
+            "state": "disabled"
+          },
+          {
+            "coin": "DOT",
+            "name": "DOT/BUSD L1 TAC1 AUTO",
+            "id": 6755857,
+            "state": "disabled"
+          },
+          {
+            "coin": "DAR",
+            "name": "DAR/BUSD L1 TAC1 AUTO",
+            "id": 6760027,
+            "state": "disabled"
+          },
+          {
+            "coin": "SHIB",
+            "name": "SHIB/BUSD L1 TAC1 AUTO",
+            "id": 6764716,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/BUSD L1 TAC1 AUTO",
+            "id": 6769704,
+            "state": "enabled"
+          },
+          {
+            "coin": "ONE",
+            "name": "ONE/BUSD L1 TAC1 AUTO",
+            "id": 6803278,
+            "state": "disabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/BUSD L1 TAC1 AUTO",
+            "id": 6805786,
+            "state": "disabled"
+          },
+          {
+            "coin": "BTC",
+            "name": "BTC/BUSD L1 TAC1 AUTO",
+            "id": 6819769,
+            "state": "enabled"
+          },
+          {
+            "coin": "DOGE",
+            "name": "DOGE/BUSD L1 TAC1 AUTO",
+            "id": 6829109,
+            "state": "enabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/BUSD L1 TAC1 AUTO",
+            "id": 6831873,
+            "state": "disabled"
+          },
+          {
+            "coin": "LUNA",
+            "name": "LUNA/BUSD L1 TAC1 AUTO",
+            "id": 6832228,
+            "state": "enabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L1 TAC1 AUTO",
+            "id": 6833561,
+            "state": "enabled"
+          },
+          {
+            "coin": "ZEN",
+            "name": "ZEN/BUSD L1 TAC1 AUTO",
+            "id": 6848132,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L1 TAC1 AUTO",
+            "id": 6861473,
+            "state": "enabled"
+          },
+          {
+            "coin": "MASK",
+            "name": "MASK/BUSD L1 TAC1 AUTO",
+            "id": 6869014,
             "state": "enabled"
           }
         ]
@@ -271,46 +710,165 @@
         "quote": "BUSD",
         "pair_number": 2,
         "coins": [
-          "MANA",
-          "SAND",
-          "LRC"
+          "SUSHI",
+          "ENS"
         ],
         "bots": [
           {
             "coin": "MANA",
             "name": "MANA/BUSD L2 TAC1 AUTO",
             "id": 6693228,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
             "name": "MANA/BUSD L2 TAC1 AUTO",
             "id": 6693229,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L2 TAC1 AUTO",
             "id": 6693230,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L2 TAC1 AUTO",
             "id": 6693233,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "LRC",
             "name": "LRC/BUSD L2 TAC1 AUTO",
             "id": 6706455,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "LRC",
             "name": "LRC/BUSD L2 TAC1 AUTO",
             "id": 6706456,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD L2 TAC1 AUTO",
+            "id": 6736169,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD L2 TAC1 AUTO",
+            "id": 6736170,
+            "state": "disabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/BUSD L2 TAC1 AUTO",
+            "id": 6743435,
             "state": "enabled"
+          },
+          {
+            "coin": "SUSHI",
+            "name": "SUSHI/BUSD L2 TAC1 AUTO",
+            "id": 6743436,
+            "state": "enabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L2 TAC1 AUTO",
+            "id": 6751670,
+            "state": "disabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L2 TAC1 AUTO",
+            "id": 6751671,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L2 TAC1 AUTO",
+            "id": 6755016,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L2 TAC1 AUTO",
+            "id": 6755017,
+            "state": "disabled"
+          },
+          {
+            "coin": "SHIB",
+            "name": "SHIB/BUSD L2 TAC1 AUTO",
+            "id": 6764717,
+            "state": "disabled"
+          },
+          {
+            "coin": "SHIB",
+            "name": "SHIB/BUSD L2 TAC1 AUTO",
+            "id": 6764718,
+            "state": "disabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/BUSD L2 TAC1 AUTO",
+            "id": 6837593,
+            "state": "disabled"
+          },
+          {
+            "coin": "BAT",
+            "name": "BAT/BUSD L2 TAC1 AUTO",
+            "id": 6837594,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L2 TAC1 AUTO",
+            "id": 6837596,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L2 TAC1 AUTO",
+            "id": 6837597,
+            "state": "disabled"
+          },
+          {
+            "coin": "ZEN",
+            "name": "ZEN/BUSD L2 TAC1 AUTO",
+            "id": 6848133,
+            "state": "disabled"
+          },
+          {
+            "coin": "ZEN",
+            "name": "ZEN/BUSD L2 TAC1 AUTO",
+            "id": 6848134,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L2 TAC1 AUTO",
+            "id": 6861474,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L2 TAC1 AUTO",
+            "id": 6861475,
+            "state": "enabled"
+          },
+          {
+            "coin": "MASK",
+            "name": "MASK/BUSD L2 TAC1 AUTO",
+            "id": 6876485,
+            "state": "disabled"
+          },
+          {
+            "coin": "MASK",
+            "name": "MASK/BUSD L2 TAC1 AUTO",
+            "id": 6876486,
+            "state": "disabled"
           }
         ]
       },
@@ -319,44 +877,133 @@
         "quote": "BUSD",
         "pair_number": 3,
         "coins": [
-          "MANA",
-          "SAND"
+          "ENS"
         ],
         "bots": [
           {
             "coin": "MANA",
             "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694273,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
             "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694274,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
             "name": "MANA/BUSD L3 TAC1 AUTO",
             "id": 6694275,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694276,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694277,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L3 TAC1 AUTO",
             "id": 6694278,
+            "state": "disabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L3 TAC1 AUTO",
+            "id": 6746147,
+            "state": "disabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L3 TAC1 AUTO",
+            "id": 6746148,
+            "state": "disabled"
+          },
+          {
+            "coin": "IOTX",
+            "name": "IOTX/BUSD L3 TAC1 AUTO",
+            "id": 6746149,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L3 TAC1 AUTO",
+            "id": 6755018,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L3 TAC1 AUTO",
+            "id": 6755020,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L3 TAC1 AUTO",
+            "id": 6755021,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/BUSD L3 TAC1 AUTO",
+            "id": 6769705,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/BUSD L3 TAC1 AUTO",
+            "id": 6769706,
+            "state": "disabled"
+          },
+          {
+            "coin": "CHR",
+            "name": "CHR/BUSD L3 TAC1 AUTO",
+            "id": 6769707,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L3 TAC1 AUTO",
+            "id": 6838303,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L3 TAC1 AUTO",
+            "id": 6838305,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L3 TAC1 AUTO",
+            "id": 6838306,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L3 TAC1 AUTO",
+            "id": 6861598,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L3 TAC1 AUTO",
+            "id": 6861599,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L3 TAC1 AUTO",
+            "id": 6861600,
             "state": "enabled"
           }
         ]
@@ -366,31 +1013,103 @@
         "quote": "BUSD",
         "pair_number": 4,
         "coins": [
-          "SAND"
+          "ENS"
         ],
         "bots": [
           {
             "coin": "SAND",
             "name": "SAND/BUSD L4 TAC1 AUTO",
             "id": 6705287,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L4 TAC1 AUTO",
             "id": 6705288,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L4 TAC1 AUTO",
             "id": 6705289,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L4 TAC1 AUTO",
             "id": 6705290,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L4 TAC1 AUTO",
+            "id": 6768306,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L4 TAC1 AUTO",
+            "id": 6768307,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L4 TAC1 AUTO",
+            "id": 6768308,
+            "state": "disabled"
+          },
+          {
+            "coin": "SLP",
+            "name": "SLP/BUSD L4 TAC1 AUTO",
+            "id": 6768310,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L4 TAC1 AUTO",
+            "id": 6848135,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L4 TAC1 AUTO",
+            "id": 6848136,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L4 TAC1 AUTO",
+            "id": 6848137,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L4 TAC1 AUTO",
+            "id": 6848138,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L4 TAC1 AUTO",
+            "id": 6861814,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L4 TAC1 AUTO",
+            "id": 6861815,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L4 TAC1 AUTO",
+            "id": 6861816,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L4 TAC1 AUTO",
+            "id": 6861818,
             "state": "enabled"
           }
         ]
@@ -400,37 +1119,202 @@
         "quote": "BUSD",
         "pair_number": 5,
         "coins": [
-          "SAND"
+          "ENS"
         ],
         "bots": [
           {
             "coin": "SAND",
             "name": "SAND/BUSD L5 TAC1 AUTO",
             "id": 6706935,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L5 TAC1 AUTO",
             "id": 6706937,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L5 TAC1 AUTO",
             "id": 6706939,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L5 TAC1 AUTO",
             "id": 6706940,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/BUSD L5 TAC1 AUTO",
             "id": 6706941,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L5 TAC1 AUTO",
+            "id": 6848140,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L5 TAC1 AUTO",
+            "id": 6848141,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L5 TAC1 AUTO",
+            "id": 6848142,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L5 TAC1 AUTO",
+            "id": 6848143,
+            "state": "disabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD L5 TAC1 AUTO",
+            "id": 6848144,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L5 TAC1 AUTO",
+            "id": 6861819,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L5 TAC1 AUTO",
+            "id": 6861820,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L5 TAC1 AUTO",
+            "id": 6861821,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L5 TAC1 AUTO",
+            "id": 6861822,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L5 TAC1 AUTO",
+            "id": 6861823,
+            "state": "enabled"
+          }
+        ]
+      },
+      {
+        "name": "L6",
+        "quote": "BUSD",
+        "pair_number": 6,
+        "coins": [],
+        "bots": [
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876100,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876101,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876102,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876103,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876104,
+            "state": "disabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD L6 TAC1 AUTO",
+            "id": 6876105,
+            "state": "disabled"
+          }
+        ]
+      },
+      {
+        "name": "HOLD1",
+        "quote": "BUSD",
+        "pair_number": 1,
+        "strategy": "URMAHODL",
+        "coins": [
+          "AVAX",
+          "LPT"
+        ],
+        "bots": [
+          {
+            "coin": "AVAX",
+            "name": "AVAX/BUSD HOLD1 URMAHODL AUTO",
+            "id": 6805788,
+            "state": "enabled"
+          },
+          {
+            "coin": "LPT",
+            "name": "LPT/BUSD HOLD1 URMAHODL AUTO",
+            "id": 6806863,
+            "state": "enabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD HOLD1 URMAHODL AUTO",
+            "id": 6820987,
+            "state": "disabled"
+          }
+        ]
+      },
+      {
+        "name": "HOLD2",
+        "quote": "BUSD",
+        "pair_number": 1,
+        "strategy": "TAH1",
+        "coins": [
+          "FLOW",
+          "ENS",
+          "DOGE"
+        ],
+        "bots": [
+          {
+            "coin": "FLOW",
+            "name": "FLOW/BUSD HOLD2 TAH1 AUTO",
+            "id": 6830089,
+            "state": "enabled"
+          },
+          {
+            "coin": "ENS",
+            "name": "ENS/BUSD HOLD2 TAH1 AUTO",
+            "id": 6861523,
+            "state": "enabled"
+          },
+          {
+            "coin": "DOGE",
+            "name": "DOGE/BUSD HOLD2 TAH1 AUTO",
+            "id": 6875595,
             "state": "enabled"
           }
         ]
