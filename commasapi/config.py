@@ -1,6 +1,7 @@
 BASE_URL = 'https://api.3commas.io'
 PUBLIC_API = '/public/api'
-API_VERSION = '/ver1'
+V1 = '/ver1'
+V2 = '/v2'
 
 # account api
 ACCOUNTS = '/accounts'
@@ -15,3 +16,8 @@ BOT_INFO = '/bots/{bot_id}/show'
 BOT_ENABLE = '/bots/{bot_id}/enable'
 BOT_DISABLE = '/bots/{bot_id}/disable'
 BOT_DELETE = '/bots/{bot_id}/delete'
+
+# smart trade
+
+SMART_TRADE = '/smart_trades'
+
