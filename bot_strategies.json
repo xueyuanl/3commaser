@@ -86,6 +86,36 @@
       "request_change": 41.39
     }
   },
+  "TASUv1": {
+    "name": "TA Strong Uptrend custom version 1",
+    "TP": 1.5,
+    "BO": 20,
+    "SO": 40,
+    "OS": 1.4,
+    "SS": 1.23,
+    "SOS": 2,
+    "MSTC": 10,
+    "info": {
+      "budget": 2815,
+      "coverage": 60.22,
+      "request_change": 40.9
+    }
+  },
+  "TASUv2": {
+    "name": "TA Strong Uptrend custom version 2",
+    "TP": 1.5,
+    "BO": 20,
+    "SO": 40,
+    "OS": 1.26,
+    "SS": 1.13,
+    "SOS": 2,
+    "MSTC": 13,
+    "info": {
+      "budget": 2970,
+      "coverage": 59.96,
+      "request_change": 43.62
+    }
+  },
   "TADR": {
     "name": "TA Deep Retracements",
     "TP": 3,
@@ -158,6 +188,21 @@
       "budget": 1108,
       "coverage": 59.66,
       "request_change": 84.31
+    }
+  },
+  "KIRIv2": {
+    "name": "Kirigakue v2",
+    "TP": 3,
+    "BO": 100,
+    "SO": 10,
+    "OS": 1.01,
+    "SS": 0.98,
+    "SOS": 1.25,
+    "MSTC": 100,
+    "info": {
+      "budget": 1800,
+      "coverage": 54.21,
+      "request_change": 32.43
     }
   },
   "KIRIv3": {
