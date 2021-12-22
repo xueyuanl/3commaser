@@ -1,11 +1,17 @@
-from commaser.exchange import Exchange
-from commaser.smart_trade import create_smart_trade
+from futures.harmonic import Bat
 
 
 def main():
-    exchange = Exchange.BINANCE
-    account_id = 31012823
-    res = create_smart_trade(exchange, account_id, 'BTC', 'USDT', 100, 2000, 10)
+    x = 48413
+    a = 49241
+    base = 'BTC'
+    # ------
+    quote = 'USD'
+    invest = 100
+    leverage = 10
+    bat = Bat(x, a)
+    account = 'FTX-perp (Futures)'
+    res = bat.create_trade(account, base, quote, invest, leverage)
 
     print(res)
 

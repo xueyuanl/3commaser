@@ -1,4 +1,3 @@
-from .exchange import Exchange
 from .threecommas import threec
 
 
@@ -9,34 +8,26 @@ def get_smart_trade():
     return threec.smart_trade_get()
 
 
-def create_smart_trade(exchange, account_id, base, quote, total, price, leverage):
-    if exchange == Exchange.BINANCE:
-        pair_str = quote + '_' + base + quote
-        leverage_type = 'isolated'
-    elif exchange == Exchange.FTX:
-        pair_str = quote + '_' + base + '-' + 'PERP'
-        leverage_type = 'cross'
-
-    position_units = total / price
+def create_smart_trade(account_id, pair, total, open_price, leverage, **kwargs):
+    position_units = total / open_price
 
     data = {
         'account_id': account_id,  # 31012823
-        'pair': pair_str,
+        'pair': pair,
         'leverage': {
             'enabled': True,
-            'type': leverage_type,
+            'type': kwargs['leverage_type'],
             'value': leverage
         },
         'position': {
-            'type': 'buy',
-            'order_type': 'limit',
+            'type': kwargs['position_type'],
+            'order_type': kwargs['order_type'],
             'units': {
                 'value': position_units
             },
             'price': {
-                'value': price
+                'value': open_price
             }
-
         },
         'take_profit': {
             'enabled': False
@@ -45,5 +36,10 @@ def create_smart_trade(exchange, account_id, base, quote, total, price, leverage
             'enabled': False
         }
     }
+    if 'take_profit' in kwargs:
+        data['take_profit'] = kwargs['take_profit']
+    if 'stop_loss' in kwargs:
+        data['stop_loss'] = kwargs['stop_loss']
+
     res = threec.smart_trade_create(**data)
     return res

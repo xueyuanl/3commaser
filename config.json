@@ -45,7 +45,8 @@
           "IMX",
           "SAND",
           "MANA",
-          "ENS"
+          "ENS",
+          "GOG"
         ],
         "bots": [
           {
@@ -107,6 +108,12 @@
             "name": "BICO/USD T1 TASUv2 AUTO",
             "id": 7210311,
             "state": "disabled"
+          },
+          {
+            "coin": "GOG",
+            "name": "GOG/USD T1 TASUv2 AUTO",
+            "id": 7441746,
+            "state": "enabled"
           }
         ]
       },
@@ -998,7 +1005,9 @@
           "SAND",
           "AR",
           "AVAX",
-          "SOL"
+          "SOL",
+          "LUNA",
+          "RNDR"
         ],
         "bots": [
           {
@@ -1131,6 +1140,18 @@
             "coin": "SOL",
             "name": "SOL/BUSD T1 TASUv2 AUTO",
             "id": 7394816,
+            "state": "enabled"
+          },
+          {
+            "coin": "LUNA",
+            "name": "LUNA/BUSD T1 TASUv2 AUTO",
+            "id": 7407915,
+            "state": "enabled"
+          },
+          {
+            "coin": "RNDR",
+            "name": "RNDR/BUSD T1 TASUv2 AUTO",
+            "id": 7441369,
             "state": "enabled"
           }
         ]
