@@ -1007,7 +1007,8 @@
           "AVAX",
           "SOL",
           "LUNA",
-          "RNDR"
+          "RNDR",
+          "PEOPLE"
         ],
         "bots": [
           {
@@ -1152,6 +1153,12 @@
             "coin": "RNDR",
             "name": "RNDR/BUSD T1 TASUv2 AUTO",
             "id": 7441369,
+            "state": "enabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/BUSD T1 TASUv2 AUTO",
+            "id": 7457934,
             "state": "enabled"
           }
         ]
