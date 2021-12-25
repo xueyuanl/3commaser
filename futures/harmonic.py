@@ -1,4 +1,4 @@
-from commaser.account import get_account_id
+from commaser.account import get_account_id, get_account_entity
 from commaser.exchange import Exchange
 from commaser.smart_trade import create_smart_trade
 from .constant import *
@@ -29,19 +29,20 @@ class Gartley(object):
             self.__class__.__name__, self.position_type, self.open_point, self.stop_loss))
         print('{} pattern target profit scheme is {}'.format(self.__class__.__name__, self.tp_scheme))
 
-    def create_trade(self, account, base, quote, invest, leverage, **kwargs):
+    def create_trade(self, account_name, base, quote, invest, leverage, **kwargs):
         exchange = kwargs.get('exchange', Exchange.FTX)
 
-        account_id = get_account_id(account)
+        account = get_account_entity(account_name)
+        account_id = account.id_
         params = {
             'position_type': self.position_type,
             'order_type': ORDER_LIMIT
         }
 
-        if exchange == Exchange.BINANCE:
+        if account.is_binance():
             pair = quote + '_' + base + quote
             params['leverage_type'] = 'isolated'
-        elif exchange == Exchange.FTX:
+        elif account.is_ftx():
             pair = quote + '_' + base + '-' + 'PERP'
             params['leverage_type'] = 'cross'
 
@@ -71,7 +72,8 @@ class Gartley(object):
                 }
             }
         }
-        res = create_smart_trade(account_id, pair, invest, self.open_point, leverage, **params)
+        total = invest * leverage
+        res = create_smart_trade(account_id, pair, total, self.open_point, leverage, **params)
         return res
 
 

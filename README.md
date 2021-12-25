@@ -13,3 +13,22 @@ For more GitHub Action limitation, refer: https://docs.github.com/en/actions/lea
 2. Clone this repo to your account and change some config.
 2. Just Add your bot ids in the list in the `config.py` file.
 3. Push the change to your new repo, just like that.
+
+# Docker
+
+```
+docker build -t 3commas .
+
+# add your api key first
+docker run -it --rm \
+-v $PWD/bot_strategies.json:/bot_strategies.json \
+-v $PWD/config.json:/config.json \
+--name 3commas \
+-p 3333:3333 \
+--env API_KEY=$API_KEY \
+--env SECRET=$SECRET \
+3commas /bin/bash
+
+# test
+# docker exec -it 3commas /bin/bash
+```

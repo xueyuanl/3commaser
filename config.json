@@ -46,7 +46,7 @@
           "SAND",
           "MANA",
           "ENS",
-          "GOG"
+          "RNDR"
         ],
         "bots": [
           {
@@ -113,6 +113,12 @@
             "coin": "GOG",
             "name": "GOG/USD T1 TASUv2 AUTO",
             "id": 7441746,
+            "state": "disabled"
+          },
+          {
+            "coin": "RNDR",
+            "name": "RNDR/USD T1 TASUv2 AUTO",
+            "id": 7468311,
             "state": "enabled"
           }
         ]
@@ -1001,7 +1007,6 @@
           "ENS",
           "GALA",
           "MANA",
-          "DYDX",
           "SAND",
           "AR",
           "AVAX",
@@ -1087,7 +1092,7 @@
             "coin": "DYDX",
             "name": "DYDX/BUSD T1 TASUv2 AUTO",
             "id": 7000227,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "ALICE",
@@ -1169,7 +1174,10 @@
         "pair_number": 2,
         "strategy": "TASUv2",
         "coins": [
-          "ENS"
+          "ENS",
+          "RNDR",
+          "PEOPLE",
+          "AR"
         ],
         "bots": [
           {
@@ -1303,6 +1311,42 @@
             "name": "MANA/BUSD T2 TASUv2 AUTO",
             "id": 7074866,
             "state": "disabled"
+          },
+          {
+            "coin": "RNDR",
+            "name": "RNDR/BUSD T2 TASUv2 AUTO",
+            "id": 7468294,
+            "state": "enabled"
+          },
+          {
+            "coin": "RNDR",
+            "name": "RNDR/BUSD T2 TASUv2 AUTO",
+            "id": 7468295,
+            "state": "enabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/BUSD T2 TASUv2 AUTO",
+            "id": 7468297,
+            "state": "enabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/BUSD T2 TASUv2 AUTO",
+            "id": 7468298,
+            "state": "enabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T2 TASUv2 AUTO",
+            "id": 7472333,
+            "state": "enabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T2 TASUv2 AUTO",
+            "id": 7472334,
+            "state": "enabled"
           }
         ]
       },
