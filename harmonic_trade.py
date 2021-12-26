@@ -1,5 +1,6 @@
 import argparse
 
+from constants import *
 from futures.constant import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB
 from futures.harmonic import Gartley, Bat, Butterfly, Shark, Crab
 
@@ -21,14 +22,14 @@ def get_args():
 
     parser.add_argument('-b', '--base', dest='base', required=True, action='store', type=str, help='coin name')
     parser.add_argument('-q', '--quote', dest='quote', action='store', type=str, nargs='?',
-                        default='USDT', help='USDT or USD')
+                        default='USD', help='USDT or USD')
 
     parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, nargs='?', default=100,
                         help='number of invest')
     parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=10,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
-                        default='Binance Futures USDT-M', help='account name')
+                        default=FTX_FUTURE, help='account name')
 
     args = parser.parse_args()
     if args.harmonic == SHARK and not args.c:
@@ -48,7 +49,7 @@ def main():
     print(f'Total invest {args.invest} at leverage {args.leverage}')
     print(f'Opening position on account {args.account}')
     print('------')
-    
+
     harmonic = args.harmonic
     x = args.x
     a = args.a
@@ -58,7 +59,7 @@ def main():
     quote = args.quote
     invest = args.invest
     leverage = args.leverage
-    account_name = args.account  # 'FTX-perp (Futures)'
+    account_name = args.account
 
     if harmonic == SHARK:
         if not c:

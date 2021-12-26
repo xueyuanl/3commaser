@@ -41,6 +41,6 @@ def create_smart_trade(account_id, pair, total, open_price, leverage, **kwargs):
     if 'stop_loss' in kwargs:
         data['stop_loss'] = kwargs['stop_loss']
 
-    logger_.info('smart trade params: {}'.format(data))
+    logger_.debug('smart trade params: {}'.format(data))
     res = threec.smart_trade_create(**data)
     return res

@@ -46,7 +46,10 @@
           "SAND",
           "MANA",
           "ENS",
-          "RNDR"
+          "RNDR",
+          "FTM",
+          "BICO",
+          "DFL"
         ],
         "bots": [
           {
@@ -101,13 +104,13 @@
             "coin": "DFL",
             "name": "DFL/USD T1 TASUv2 AUTO",
             "id": 7084749,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "BICO",
             "name": "BICO/USD T1 TASUv2 AUTO",
             "id": 7210311,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "GOG",
@@ -120,6 +123,12 @@
             "name": "RNDR/USD T1 TASUv2 AUTO",
             "id": 7468311,
             "state": "enabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/USD T1 TASUv2 AUTO",
+            "id": 7498026,
+            "state": "enabled"
           }
         ]
       },
@@ -130,7 +139,8 @@
         "strategy": "TASUv2",
         "coins": [
           "IMX",
-          "ENS"
+          "ENS",
+          "SAND"
         ],
         "bots": [
           {
@@ -161,13 +171,13 @@
             "coin": "SAND",
             "name": "SAND/USD T2 TASUv2 AUTO",
             "id": 6983572,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "SAND",
             "name": "SAND/USD T2 TASUv2 AUTO",
             "id": 6983573,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "CHR",

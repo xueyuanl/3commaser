@@ -1,9 +1,9 @@
-from commaser.account import get_account_id, get_account_entity
-from commaser.exchange import Exchange
+from commaser.account import get_account_entity
 from commaser.smart_trade import create_smart_trade
+from log import logger_
 from .constant import *
 
-volume_scheme = {'v304030': [30, 40, 30]}
+volume_scheme = {'v403030': [40, 30, 30]}
 
 
 def _three_target_profit_scheme(a, d):
@@ -11,7 +11,7 @@ def _three_target_profit_scheme(a, d):
     tp_two = d - (d - a) * F5
     tp_three = d - (d - a) * F618
 
-    vs = volume_scheme['v304030']
+    vs = volume_scheme['v403030']
     return [(tp_one, vs[0]), (tp_two, vs[1]), (tp_three, vs[2])]
 
 
@@ -25,13 +25,19 @@ class Gartley(object):
         self.print_status()
 
     def print_status(self):
-        print('{} pattern position type is {}, open point {}, stop loss point {}.'.format(
-            self.__class__.__name__, self.position_type, self.open_point, self.stop_loss))
-        print('{} pattern target profit scheme is {}'.format(self.__class__.__name__, self.tp_scheme))
+        logger_.info('|------')
+        logger_.info('|{} pattern position type: {}, open point {}.'.format(
+            self.__class__.__name__, self.position_type, self.open_point))
+        scheme = ''
+        for s in self.tp_scheme:
+            scheme += '{}/{}%, '.format(round(s[0], 2), s[1])
+        scheme = scheme[:-2]
+        logger_.info('|Target profit scheme: {}.'.format(scheme))
+        loss_percent = round(abs((self.open_point - self.stop_loss) / self.open_point) * 100, 2)
+        logger_.info('|Stop loss {}, percentage {}%.'.format(self.stop_loss, loss_percent))
+        logger_.info('|------')
 
-    def create_trade(self, account_name, base, quote, invest, leverage, **kwargs):
-        exchange = kwargs.get('exchange', Exchange.FTX)
-
+    def create_trade(self, account_name, base, quote, invest, leverage):
         account = get_account_entity(account_name)
         account_id = account.id_
         params = {

@@ -40,7 +40,7 @@ class ThreeCommas(object):
         }
         self._session.headers.update(headers)
         url = '{}{}'.format(self.base_url, new_path)
-        self._logger.info('calling GET api: {}'.format(url))
+        self._logger.debug('calling GET api: {}'.format(url))
         try:
             response = self._session.get(url)
             rep = Response(response)
@@ -59,7 +59,7 @@ class ThreeCommas(object):
         }
         self._session.headers.update(headers)
         url = '{}{}'.format(self.base_url, path_)
-        self._logger.info('calling POST api: {}'.format(url))
+        self._logger.debug('calling POST api: {}'.format(url))
         try:
             response = self._session.post(url, json=kwargs)
             rep = Response(response)
@@ -78,7 +78,7 @@ class ThreeCommas(object):
         }
         self._session.headers.update(headers)
         url = '{}{}'.format(self.base_url, path_)
-        self._logger.info('calling POST api: {}'.format(url))
+        self._logger.debug('calling POST api: {}'.format(url))
         try:
             response = self._session.patch(url, json=kwargs)
             rep = Response(response)
