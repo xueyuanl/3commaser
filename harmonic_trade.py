@@ -30,6 +30,7 @@ def get_args():
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX_FUTURE, help='account name')
+    parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
 
     args = parser.parse_args()
     if args.harmonic == SHARK and not args.c:
@@ -67,6 +68,8 @@ def main():
         harmonic_obj = harmonics[harmonic](x, a, c)
     else:
         harmonic_obj = harmonics[harmonic](x, a)
+    if args.risk:
+        invest = args.risk * 100 / harmonic_obj.get_lost_percentage() / leverage
     res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage)
     print('result: {}'.format(res.ok))
 

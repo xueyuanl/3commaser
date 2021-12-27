@@ -49,7 +49,8 @@
           "RNDR",
           "FTM",
           "BICO",
-          "DFL"
+          "DFL",
+          "AVAX"
         ],
         "bots": [
           {
@@ -128,6 +129,12 @@
             "coin": "FTM",
             "name": "FTM/USD T1 TASUv2 AUTO",
             "id": 7498026,
+            "state": "enabled"
+          },
+          {
+            "coin": "AVAX",
+            "name": "AVAX/USD T1 TASUv2 AUTO",
+            "id": 7508216,
             "state": "enabled"
           }
         ]
