@@ -1,0 +1,5 @@
+ORDER_LIMIT = 'limit'
+ORDER_MARKET = 'market'
+ORDER_CONDITIONAL = 'conditional'
+COND_LIMIT = 'limit'
+COND_MARKET = 'market'

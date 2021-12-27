@@ -1,7 +1,7 @@
 from commaser.account import get_account_entity
 from commaser.smart_trade import create_smart_trade
 from log import logger_
-from .constant import *
+from .constants import *
 
 volume_scheme = {'v403030': [40, 30, 30]}
 
@@ -33,12 +33,12 @@ class Gartley(object):
             scheme += '{}/{}%, '.format(round(s[0], 2), s[1])
         scheme = scheme[:-2]
         logger_.info('|Target profit scheme: {}.'.format(scheme))
-        loss_percent = self.get_lost_percentage()
+        loss_percent = self.get_lost_percentage() * 100
         logger_.info('|Stop loss {}, percentage {}%.'.format(self.stop_loss, loss_percent))
         logger_.info('|------')
 
     def get_lost_percentage(self):
-        return round(abs((self.open_point - self.stop_loss) / self.open_point) * 100, 2)
+        return round(abs((self.open_point - self.stop_loss) / self.open_point), 4)
 
     def create_trade(self, account_name, base, quote, invest, leverage):
         account = get_account_entity(account_name)

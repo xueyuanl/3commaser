@@ -1,7 +1,7 @@
 import argparse
 
 from constants import *
-from futures.constant import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB
+from futures.constants import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB
 from futures.harmonic import Gartley, Bat, Butterfly, Shark, Crab
 
 harmonics = {
@@ -24,9 +24,9 @@ def get_args():
     parser.add_argument('-q', '--quote', dest='quote', action='store', type=str, nargs='?',
                         default='USD', help='USDT or USD')
 
-    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, nargs='?', default=100,
+    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, nargs='?', default=50,
                         help='number of invest')
-    parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=10,
+    parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=20,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX_FUTURE, help='account name')
@@ -40,16 +40,6 @@ def get_args():
 
 def main():
     args = get_args()
-    print('------')
-    print(f'Harmonic pattern is {args.harmonic}.')
-    if args.harmonic == SHARK:
-        print(f'X point {args.x}, A point {args.a}, C point {args.c}')
-    else:
-        print(f'X point {args.x}, A point {args.a}.')
-    print(f'Trade pair is {args.base}/{args.quote}.')
-    print(f'Total invest {args.invest} at leverage {args.leverage}')
-    print(f'Opening position on account {args.account}')
-    print('------')
 
     harmonic = args.harmonic
     x = args.x
@@ -69,7 +59,21 @@ def main():
     else:
         harmonic_obj = harmonics[harmonic](x, a)
     if args.risk:
-        invest = args.risk * 100 / harmonic_obj.get_lost_percentage() / leverage
+        invest = args.risk / harmonic_obj.get_lost_percentage() / leverage
+
+    print('------')
+    print(f'Harmonic pattern: {args.harmonic}.')
+    if args.harmonic == SHARK:
+        print(f'X point {args.x}, A point {args.a}, C point {args.c}')
+    else:
+        print(f'X point {args.x}, A point {args.a}.')
+    print(f'Trade pair: {args.base}/{args.quote}.')
+    print(f'Total invest {round(invest, 2)} at leverage {args.leverage}')
+    max_loss = args.risk if args.risk else invest * leverage * harmonic_obj.get_lost_percentage()
+    print(f'Max loss: {round(max_loss, 2)} USD at {harmonic_obj.get_lost_percentage() * 100}%.')
+    print(f'Opening position on account {args.account}')
+    print('------')
+
     res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage)
     print('result: {}'.format(res.ok))
 

@@ -12,6 +12,7 @@ F1618 = 1.618
 F2000 = 2
 ORDER_LIMIT = 'limit'
 ORDER_MARKET = 'market'
+ORDER_CONDITIONAL = 'conditional'
 GARTLEY = 'gartley'
 BAT = 'bat'
 BUTTERFLY = 'butterfly'
