@@ -50,7 +50,8 @@
           "FTM",
           "BICO",
           "DFL",
-          "AVAX"
+          "AVAX",
+          "DYDX"
         ],
         "bots": [
           {
@@ -135,6 +136,12 @@
             "coin": "AVAX",
             "name": "AVAX/USD T1 TASUv2 AUTO",
             "id": 7508216,
+            "state": "enabled"
+          },
+          {
+            "coin": "DYDX",
+            "name": "DYDX/USD T1 TASUv2 AUTO",
+            "id": 7537176,
             "state": "enabled"
           }
         ]

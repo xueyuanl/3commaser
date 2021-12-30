@@ -1,14 +1,15 @@
 import argparse
 
 from constants import *
-from futures.constants import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB
-from futures.harmonic import Gartley, Bat, Butterfly, Shark, Crab
+from futures.constants import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB, SHARK886
+from futures.harmonic import Gartley, Bat, Butterfly, Shark, Crab, Shark886
 
 harmonics = {
     GARTLEY: Gartley,
     BAT: Bat,
     BUTTERFLY: Butterfly,
     SHARK: Shark,
+    SHARK886: Shark886,
     CRAB: Crab
 }
 
@@ -31,6 +32,7 @@ def get_args():
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX_FUTURE, help='account name')
     parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
+    parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
     args = parser.parse_args()
     if args.harmonic == SHARK and not args.c:
@@ -52,7 +54,7 @@ def main():
     leverage = args.leverage
     account_name = args.account
 
-    if harmonic == SHARK:
+    if harmonic == SHARK or harmonic == SHARK886:
         if not c:
             raise Exception('need value on c')
         harmonic_obj = harmonics[harmonic](x, a, c)
@@ -70,11 +72,11 @@ def main():
     print(f'Trade pair: {args.base}/{args.quote}.')
     print(f'Total invest {round(invest, 2)} at leverage {args.leverage}')
     max_loss = args.risk if args.risk else invest * leverage * harmonic_obj.get_lost_percentage()
-    print(f'Max loss: {round(max_loss, 2)} USD at {harmonic_obj.get_lost_percentage() * 100}%.')
+    print(f'Max loss: {round(max_loss, 2)} USD at {round(harmonic_obj.get_lost_percentage() * 100, 2)}%.')
     print(f'Opening position on account {args.account}')
     print('------')
 
-    res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage)
+    res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage, note=args.note)
     print('result: {}'.format(res.ok))
 
 

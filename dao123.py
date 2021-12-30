@@ -21,6 +21,7 @@ def get_args():
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX_FUTURE, help='account name')
     parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
+    parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
     args = parser.parse_args()
     return args
@@ -47,11 +48,11 @@ def main():
     print(f'Price at {args.price}, stop loss at {args.stop}.')
     print(f'Total invest {round(invest, 2)} at leverage {args.leverage}')
     max_loss = args.risk if args.risk else invest * leverage * dao.get_lost_percentage()
-    print(f'Max loss: {round(max_loss, 2)} USD at {dao.get_lost_percentage() * 100}%.')
+    print(f'Max loss: {round(max_loss, 2)} USD at {round(dao.get_lost_percentage() * 100, 2)}%.')
     print(f'Opening position on account {args.account}')
     print('------')
 
-    res = dao.create_trade(account_name, base, quote, invest, leverage)
+    res = dao.create_trade(account_name, base, quote, invest, leverage, note=args.note)
     print('result: {}'.format(res.ok))
 
 

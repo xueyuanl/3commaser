@@ -1,5 +1,6 @@
 POSITION_BUY = 'buy'
 POSITION_SELL = 'sell'
+F146 = 0.146
 F382 = 0.381966
 F5 = 0.5
 F618 = 0.618034
@@ -17,4 +18,7 @@ GARTLEY = 'gartley'
 BAT = 'bat'
 BUTTERFLY = 'butterfly'
 SHARK = 'shark'
+SHARK886 = 'shark886'
 CRAB = 'crab'
+TP_SCHEME403030 = 'v403030'
+TP_SCHEME10204020 = 'v10204030'
