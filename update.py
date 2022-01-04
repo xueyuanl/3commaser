@@ -53,6 +53,7 @@ def main():
                 check_key('bots', g, [])
                 group_bot_list = g['bots']
                 target_number = g.get('pair_number', 1)
+                g['coins'] = sorted(list(set(g['coins'])))  # dedup and sort
                 for coin in g['coins']:
                     exchange = Account(exchange_name, id_)
                     preset = g.get('strategy', DEFAULT_STRATEGY)

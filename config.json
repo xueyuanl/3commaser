@@ -8,8 +8,8 @@
         "strategy": "TAH1",
         "coins": [
           "BAT",
-          "LINK",
-          "DOGE"
+          "DOGE",
+          "LINK"
         ],
         "bots": [
           {
@@ -40,107 +40,106 @@
         "name": "T1",
         "quote": "USD",
         "pair_number": 1,
-        "strategy": "TASUv2",
+        "strategy": "TABFTX",
         "coins": [
-          "IMX",
-          "SAND",
-          "MANA",
-          "ENS",
-          "RNDR",
-          "FTM",
-          "BICO",
-          "DFL",
           "AVAX",
-          "DYDX"
+          "CHR",
+          "DYDX",
+          "ENS",
+          "FTM",
+          "IMX",
+          "MANA",
+          "RNDR",
+          "SAND"
         ],
         "bots": [
           {
             "coin": "IMX",
-            "name": "IMX/USD T1 TASUv2 AUTO",
+            "name": "IMX/USD T1 TABFTX AUTO",
             "id": 6933206,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T1 TASUv2 AUTO",
+            "name": "SAND/USD T1 TABFTX AUTO",
             "id": 6968622,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD T1 TASUv2 AUTO",
+            "name": "MANA/USD T1 TABFTX AUTO",
             "id": 6968623,
             "state": "enabled"
           },
           {
             "coin": "CHR",
-            "name": "CHR/USD T1 TASUv2 AUTO",
+            "name": "CHR/USD T1 TABFTX AUTO",
             "id": 6968711,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "CRO",
-            "name": "CRO/USD T1 TASUv2 AUTO",
+            "name": "CRO/USD T1 TABFTX AUTO",
             "id": 6979190,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T1 TASUv2 AUTO",
+            "name": "ENS/USD T1 TABFTX AUTO",
             "id": 6982458,
             "state": "enabled"
           },
           {
             "coin": "TLM",
-            "name": "TLM/USD T1 TASUv2 AUTO",
+            "name": "TLM/USD T1 TABFTX AUTO",
             "id": 7055473,
             "state": "disabled"
           },
           {
             "coin": "LRC",
-            "name": "LRC/USD T1 TASUv2 AUTO",
+            "name": "LRC/USD T1 TABFTX AUTO",
             "id": 7060311,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T1 TASUv2 AUTO",
+            "name": "DFL/USD T1 TABFTX AUTO",
             "id": 7084749,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "BICO",
-            "name": "BICO/USD T1 TASUv2 AUTO",
+            "name": "BICO/USD T1 TABFTX AUTO",
             "id": 7210311,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "GOG",
-            "name": "GOG/USD T1 TASUv2 AUTO",
+            "name": "GOG/USD T1 TABFTX AUTO",
             "id": 7441746,
             "state": "disabled"
           },
           {
             "coin": "RNDR",
-            "name": "RNDR/USD T1 TASUv2 AUTO",
+            "name": "RNDR/USD T1 TABFTX AUTO",
             "id": 7468311,
             "state": "enabled"
           },
           {
             "coin": "FTM",
-            "name": "FTM/USD T1 TASUv2 AUTO",
+            "name": "FTM/USD T1 TABFTX AUTO",
             "id": 7498026,
             "state": "enabled"
           },
           {
             "coin": "AVAX",
-            "name": "AVAX/USD T1 TASUv2 AUTO",
+            "name": "AVAX/USD T1 TABFTX AUTO",
             "id": 7508216,
             "state": "enabled"
           },
           {
             "coin": "DYDX",
-            "name": "DYDX/USD T1 TASUv2 AUTO",
+            "name": "DYDX/USD T1 TABFTX AUTO",
             "id": 7537176,
             "state": "enabled"
           }
@@ -150,118 +149,118 @@
         "name": "T2",
         "quote": "USD",
         "pair_number": 2,
-        "strategy": "TASUv2",
+        "strategy": "TABFTX",
         "coins": [
-          "IMX",
           "ENS",
+          "IMX",
           "SAND"
         ],
         "bots": [
           {
             "coin": "CRO",
-            "name": "CRO/USD T2 TASUv2 AUTO",
+            "name": "CRO/USD T2 TABFTX AUTO",
             "id": 6982273,
             "state": "disabled"
           },
           {
             "coin": "CRO",
-            "name": "CRO/USD T2 TASUv2 AUTO",
+            "name": "CRO/USD T2 TABFTX AUTO",
             "id": 6982274,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T2 TASUv2 AUTO",
+            "name": "IMX/USD T2 TABFTX AUTO",
             "id": 6983561,
             "state": "enabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T2 TASUv2 AUTO",
+            "name": "IMX/USD T2 TABFTX AUTO",
             "id": 6983563,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T2 TASUv2 AUTO",
+            "name": "SAND/USD T2 TABFTX AUTO",
             "id": 6983572,
             "state": "enabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T2 TASUv2 AUTO",
+            "name": "SAND/USD T2 TABFTX AUTO",
             "id": 6983573,
             "state": "enabled"
           },
           {
             "coin": "CHR",
-            "name": "CHR/USD T2 TASUv2 AUTO",
+            "name": "CHR/USD T2 TABFTX AUTO",
             "id": 7015096,
             "state": "disabled"
           },
           {
             "coin": "CHR",
-            "name": "CHR/USD T2 TASUv2 AUTO",
+            "name": "CHR/USD T2 TABFTX AUTO",
             "id": 7015097,
             "state": "disabled"
           },
           {
             "coin": "DYDX",
-            "name": "DYDX/USD T2 TASUv2 AUTO",
+            "name": "DYDX/USD T2 TABFTX AUTO",
             "id": 7055746,
             "state": "disabled"
           },
           {
             "coin": "DYDX",
-            "name": "DYDX/USD T2 TASUv2 AUTO",
+            "name": "DYDX/USD T2 TABFTX AUTO",
             "id": 7055747,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T2 TASUv2 AUTO",
+            "name": "ENS/USD T2 TABFTX AUTO",
             "id": 7071299,
             "state": "enabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T2 TASUv2 AUTO",
+            "name": "ENS/USD T2 TABFTX AUTO",
             "id": 7071301,
             "state": "enabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD T2 TASUv2 AUTO",
+            "name": "MANA/USD T2 TABFTX AUTO",
             "id": 7074872,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/USD T2 TASUv2 AUTO",
+            "name": "MANA/USD T2 TABFTX AUTO",
             "id": 7074873,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T2 TASUv2 AUTO",
+            "name": "DFL/USD T2 TABFTX AUTO",
             "id": 7085953,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T2 TASUv2 AUTO",
+            "name": "DFL/USD T2 TABFTX AUTO",
             "id": 7085954,
             "state": "disabled"
           },
           {
             "coin": "BICO",
-            "name": "BICO/USD T2 TASUv2 AUTO",
+            "name": "BICO/USD T2 TABFTX AUTO",
             "id": 7210312,
             "state": "disabled"
           },
           {
             "coin": "BICO",
-            "name": "BICO/USD T2 TASUv2 AUTO",
+            "name": "BICO/USD T2 TABFTX AUTO",
             "id": 7210313,
             "state": "disabled"
           }
@@ -271,84 +270,84 @@
         "name": "T3",
         "quote": "USD",
         "pair_number": 3,
-        "strategy": "TASUv2",
+        "strategy": "TABFTX",
         "coins": [],
         "bots": [
           {
             "coin": "CRO",
-            "name": "CRO/USD T2 TASUv2 AUTO",
+            "name": "CRO/USD T3 TABFTX AUTO",
             "id": 6982273,
             "state": "disabled"
           },
           {
             "coin": "CRO",
-            "name": "CRO/USD T2 TASUv2 AUTO",
+            "name": "CRO/USD T3 TABFTX AUTO",
             "id": 6982274,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T2 TASUv2 AUTO",
+            "name": "IMX/USD T3 TABFTX AUTO",
             "id": 6983561,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T2 TASUv2 AUTO",
+            "name": "IMX/USD T3 TABFTX AUTO",
             "id": 6983563,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T2 TASUv2 AUTO",
+            "name": "SAND/USD T3 TABFTX AUTO",
             "id": 6983572,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T2 TASUv2 AUTO",
+            "name": "SAND/USD T3 TABFTX AUTO",
             "id": 6983573,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T3 TASUv2 AUTO",
+            "name": "IMX/USD T3 TABFTX AUTO",
             "id": 7005204,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T3 TASUv2 AUTO",
+            "name": "ENS/USD T3 TABFTX AUTO",
             "id": 7071302,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T3 TASUv2 AUTO",
+            "name": "ENS/USD T3 TABFTX AUTO",
             "id": 7071304,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T3 TASUv2 AUTO",
+            "name": "ENS/USD T3 TABFTX AUTO",
             "id": 7071306,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T3 TASUv2 AUTO",
+            "name": "DFL/USD T3 TABFTX AUTO",
             "id": 7089788,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T3 TASUv2 AUTO",
+            "name": "DFL/USD T3 TABFTX AUTO",
             "id": 7089789,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T3 TASUv2 AUTO",
+            "name": "DFL/USD T3 TABFTX AUTO",
             "id": 7089791,
             "state": "disabled"
           }
@@ -358,102 +357,102 @@
         "name": "T4",
         "quote": "USD",
         "pair_number": 4,
-        "strategy": "TASUv2",
+        "strategy": "TABFTX",
         "coins": [],
         "bots": [
           {
             "coin": "IMX",
-            "name": "IMX/USD T4 TASUv2 AUTO",
+            "name": "IMX/USD T4 TABFTX AUTO",
             "id": 6937496,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T4 TASUv2 AUTO",
+            "name": "IMX/USD T4 TABFTX AUTO",
             "id": 6937497,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T4 TASUv2 AUTO",
+            "name": "IMX/USD T4 TABFTX AUTO",
             "id": 6937498,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T4 TASUv2 AUTO",
+            "name": "IMX/USD T4 TABFTX AUTO",
             "id": 6937499,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T4 TASUv2 AUTO",
+            "name": "SAND/USD T4 TABFTX AUTO",
             "id": 6986754,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T4 TASUv2 AUTO",
+            "name": "SAND/USD T4 TABFTX AUTO",
             "id": 6986755,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T4 TASUv2 AUTO",
+            "name": "SAND/USD T4 TABFTX AUTO",
             "id": 6986756,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/USD T4 TASUv2 AUTO",
+            "name": "SAND/USD T4 TABFTX AUTO",
             "id": 6986757,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T4 TASUv2 AUTO",
+            "name": "ENS/USD T4 TABFTX AUTO",
             "id": 7000415,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T4 TASUv2 AUTO",
+            "name": "ENS/USD T4 TABFTX AUTO",
             "id": 7000416,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T4 TASUv2 AUTO",
+            "name": "ENS/USD T4 TABFTX AUTO",
             "id": 7000417,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T4 TASUv2 AUTO",
+            "name": "ENS/USD T4 TABFTX AUTO",
             "id": 7000418,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T4 TASUv2 AUTO",
+            "name": "DFL/USD T4 TABFTX AUTO",
             "id": 7158014,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T4 TASUv2 AUTO",
+            "name": "DFL/USD T4 TABFTX AUTO",
             "id": 7158015,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T4 TASUv2 AUTO",
+            "name": "DFL/USD T4 TABFTX AUTO",
             "id": 7158016,
             "state": "disabled"
           },
           {
             "coin": "DFL",
-            "name": "DFL/USD T4 TASUv2 AUTO",
+            "name": "DFL/USD T4 TABFTX AUTO",
             "id": 7158017,
             "state": "disabled"
           }
@@ -463,66 +462,66 @@
         "name": "T5",
         "quote": "USD",
         "pair_number": 5,
-        "strategy": "TASUv2",
+        "strategy": "TABFTX",
         "coins": [],
         "bots": [
           {
             "coin": "IMX",
-            "name": "IMX/USD T5 TASUv2 AUTO",
+            "name": "IMX/USD T5 TABFTX AUTO",
             "id": 7016831,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T5 TASUv2 AUTO",
+            "name": "IMX/USD T5 TABFTX AUTO",
             "id": 7016833,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T5 TASUv2 AUTO",
+            "name": "IMX/USD T5 TABFTX AUTO",
             "id": 7016834,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T5 TASUv2 AUTO",
+            "name": "IMX/USD T5 TABFTX AUTO",
             "id": 7016835,
             "state": "disabled"
           },
           {
             "coin": "IMX",
-            "name": "IMX/USD T5 TASUv2 AUTO",
+            "name": "IMX/USD T5 TABFTX AUTO",
             "id": 7016836,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T5 TASUv2 AUTO",
+            "name": "ENS/USD T5 TABFTX AUTO",
             "id": 7102427,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T5 TASUv2 AUTO",
+            "name": "ENS/USD T5 TABFTX AUTO",
             "id": 7102429,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T5 TASUv2 AUTO",
+            "name": "ENS/USD T5 TABFTX AUTO",
             "id": 7102431,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T5 TASUv2 AUTO",
+            "name": "ENS/USD T5 TABFTX AUTO",
             "id": 7102432,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/USD T5 TASUv2 AUTO",
+            "name": "ENS/USD T5 TABFTX AUTO",
             "id": 7102433,
             "state": "disabled"
           }
@@ -1026,168 +1025,196 @@
         "name": "T1",
         "quote": "BUSD",
         "pair_number": 1,
-        "strategy": "TASUv2",
+        "strategy": "TAB",
         "coins": [
+          "AR",
+          "ATOM",
+          "AVAX",
           "ENS",
           "GALA",
-          "MANA",
-          "SAND",
-          "AR",
-          "AVAX",
-          "SOL",
           "LUNA",
+          "MANA",
+          "NEAR",
+          "ONE",
+          "PEOPLE",
           "RNDR",
-          "PEOPLE"
+          "SAND",
+          "SCRT",
+          "SOL"
         ],
         "bots": [
           {
             "coin": "LRC",
-            "name": "LRC/BUSD T1 TASUv2 AUTO",
+            "name": "LRC/BUSD T1 TAB AUTO",
             "id": 6933207,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T1 TASUv2 AUTO",
+            "name": "ENS/BUSD T1 TAB AUTO",
             "id": 6933208,
             "state": "enabled"
           },
           {
             "coin": "CHR",
-            "name": "CHR/BUSD T1 TASUv2 AUTO",
+            "name": "CHR/BUSD T1 TAB AUTO",
             "id": 6933210,
             "state": "disabled"
           },
           {
             "coin": "WAXP",
-            "name": "WAXP/BUSD T1 TASUv2 AUTO",
+            "name": "WAXP/BUSD T1 TAB AUTO",
             "id": 6933541,
             "state": "disabled"
           },
           {
             "coin": "LTO",
-            "name": "LTO/BUSD T1 TASUv2 AUTO",
+            "name": "LTO/BUSD T1 TAB AUTO",
             "id": 6938769,
             "state": "disabled"
           },
           {
             "coin": "ANKR",
-            "name": "ANKR/BUSD T1 TASUv2 AUTO",
+            "name": "ANKR/BUSD T1 TAB AUTO",
             "id": 6938770,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T1 TASUv2 AUTO",
+            "name": "RARE/BUSD T1 TAB AUTO",
             "id": 6938942,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T1 TASUv2 AUTO",
+            "name": "GALA/BUSD T1 TAB AUTO",
             "id": 6952910,
             "state": "enabled"
           },
           {
             "coin": "DAR",
-            "name": "DAR/BUSD T1 TASUv2 AUTO",
+            "name": "DAR/BUSD T1 TAB AUTO",
             "id": 6976977,
             "state": "disabled"
           },
           {
             "coin": "AVAX",
-            "name": "AVAX/BUSD T1 TASUv2 AUTO",
+            "name": "AVAX/BUSD T1 TAB AUTO",
             "id": 6981803,
             "state": "enabled"
           },
           {
             "coin": "YGG",
-            "name": "YGG/BUSD T1 TASUv2 AUTO",
+            "name": "YGG/BUSD T1 TAB AUTO",
             "id": 6983564,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T1 TASUv2 AUTO",
+            "name": "MANA/BUSD T1 TAB AUTO",
             "id": 6994996,
             "state": "enabled"
           },
           {
             "coin": "DYDX",
-            "name": "DYDX/BUSD T1 TASUv2 AUTO",
+            "name": "DYDX/BUSD T1 TAB AUTO",
             "id": 7000227,
             "state": "disabled"
           },
           {
             "coin": "ALICE",
-            "name": "ALICE/BUSD T1 TASUv2 AUTO",
+            "name": "ALICE/BUSD T1 TAB AUTO",
             "id": 7015258,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T1 TASUv2 AUTO",
+            "name": "SAND/BUSD T1 TAB AUTO",
             "id": 7054574,
             "state": "enabled"
           },
           {
             "coin": "TLM",
-            "name": "TLM/BUSD T1 TASUv2 AUTO",
+            "name": "TLM/BUSD T1 TAB AUTO",
             "id": 7055474,
             "state": "disabled"
           },
           {
             "coin": "LPT",
-            "name": "LPT/BUSD T1 TASUv2 AUTO",
+            "name": "LPT/BUSD T1 TAB AUTO",
             "id": 7098785,
             "state": "disabled"
           },
           {
             "coin": "MASK",
-            "name": "MASK/BUSD T1 TASUv2 AUTO",
+            "name": "MASK/BUSD T1 TAB AUTO",
             "id": 7121858,
             "state": "disabled"
           },
           {
             "coin": "AR",
-            "name": "AR/BUSD T1 TASUv2 AUTO",
+            "name": "AR/BUSD T1 TAB AUTO",
             "id": 7121908,
             "state": "enabled"
           },
           {
             "coin": "BAT",
-            "name": "BAT/BUSD T1 TASUv2 AUTO",
+            "name": "BAT/BUSD T1 TAB AUTO",
             "id": 7131774,
             "state": "disabled"
           },
           {
             "coin": "SFP",
-            "name": "SFP/BUSD T1 TASUv2 AUTO",
+            "name": "SFP/BUSD T1 TAB AUTO",
             "id": 7195322,
             "state": "disabled"
           },
           {
             "coin": "SOL",
-            "name": "SOL/BUSD T1 TASUv2 AUTO",
+            "name": "SOL/BUSD T1 TAB AUTO",
             "id": 7394816,
             "state": "enabled"
           },
           {
             "coin": "LUNA",
-            "name": "LUNA/BUSD T1 TASUv2 AUTO",
+            "name": "LUNA/BUSD T1 TAB AUTO",
             "id": 7407915,
             "state": "enabled"
           },
           {
             "coin": "RNDR",
-            "name": "RNDR/BUSD T1 TASUv2 AUTO",
+            "name": "RNDR/BUSD T1 TAB AUTO",
             "id": 7441369,
             "state": "enabled"
           },
           {
             "coin": "PEOPLE",
-            "name": "PEOPLE/BUSD T1 TASUv2 AUTO",
+            "name": "PEOPLE/BUSD T1 TAB AUTO",
             "id": 7457934,
+            "state": "enabled"
+          },
+          {
+            "coin": "SCRT",
+            "name": "SCRT/BUSD T1 TAB AUTO",
+            "id": 7627624,
+            "state": "enabled"
+          },
+          {
+            "coin": "ATOM",
+            "name": "ATOM/BUSD T1 TAB AUTO",
+            "id": 7633144,
+            "state": "enabled"
+          },
+          {
+            "coin": "NEAR",
+            "name": "NEAR/BUSD T1 TAB AUTO",
+            "id": 7633145,
+            "state": "enabled"
+          },
+          {
+            "coin": "ONE",
+            "name": "ONE/BUSD T1 TAB AUTO",
+            "id": 7633146,
             "state": "enabled"
           }
         ]
@@ -1196,179 +1223,179 @@
         "name": "T2",
         "quote": "BUSD",
         "pair_number": 2,
-        "strategy": "TASUv2",
+        "strategy": "TAB",
         "coins": [
+          "AR",
           "ENS",
-          "RNDR",
           "PEOPLE",
-          "AR"
+          "RNDR"
         ],
         "bots": [
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T2 TASUv2 AUTO",
+            "name": "GALA/BUSD T2 TAB AUTO",
             "id": 6981804,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T2 TASUv2 AUTO",
+            "name": "GALA/BUSD T2 TAB AUTO",
             "id": 6981805,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T2 TASUv2 AUTO",
+            "name": "SAND/BUSD T2 TAB AUTO",
             "id": 6981807,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T2 TASUv2 AUTO",
+            "name": "SAND/BUSD T2 TAB AUTO",
             "id": 6981808,
             "state": "disabled"
           },
           {
             "coin": "MBOX",
-            "name": "MBOX/BUSD T2 TASUv2 AUTO",
+            "name": "MBOX/BUSD T2 TAB AUTO",
             "id": 6987472,
             "state": "disabled"
           },
           {
             "coin": "MBOX",
-            "name": "MBOX/BUSD T2 TASUv2 AUTO",
+            "name": "MBOX/BUSD T2 TAB AUTO",
             "id": 6987473,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T2 TASUv2 AUTO",
+            "name": "RARE/BUSD T2 TAB AUTO",
             "id": 6997644,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T2 TASUv2 AUTO",
+            "name": "RARE/BUSD T2 TAB AUTO",
             "id": 6997645,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T2 TASUv2 AUTO",
+            "name": "ENS/BUSD T2 TAB AUTO",
             "id": 6998177,
             "state": "enabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T2 TASUv2 AUTO",
+            "name": "ENS/BUSD T2 TAB AUTO",
             "id": 6998178,
             "state": "enabled"
           },
           {
             "coin": "AVAX",
-            "name": "AVAX/BUSD T2 TASUv2 AUTO",
+            "name": "AVAX/BUSD T2 TAB AUTO",
             "id": 7021647,
             "state": "disabled"
           },
           {
             "coin": "AVAX",
-            "name": "AVAX/BUSD T2 TASUv2 AUTO",
+            "name": "AVAX/BUSD T2 TAB AUTO",
             "id": 7021648,
             "state": "disabled"
           },
           {
             "coin": "ONE",
-            "name": "ONE/BUSD T2 TASUv2 AUTO",
+            "name": "ONE/BUSD T2 TAB AUTO",
             "id": 7021657,
             "state": "disabled"
           },
           {
             "coin": "ONE",
-            "name": "ONE/BUSD T2 TASUv2 AUTO",
+            "name": "ONE/BUSD T2 TAB AUTO",
             "id": 7021658,
             "state": "disabled"
           },
           {
             "coin": "CELR",
-            "name": "CELR/BUSD T2 TASUv2 AUTO",
+            "name": "CELR/BUSD T2 TAB AUTO",
             "id": 7031456,
             "state": "disabled"
           },
           {
             "coin": "CELR",
-            "name": "CELR/BUSD T2 TASUv2 AUTO",
+            "name": "CELR/BUSD T2 TAB AUTO",
             "id": 7031458,
             "state": "disabled"
           },
           {
             "coin": "FLOW",
-            "name": "FLOW/BUSD T2 TASUv2 AUTO",
+            "name": "FLOW/BUSD T2 TAB AUTO",
             "id": 7033511,
             "state": "disabled"
           },
           {
             "coin": "FLOW",
-            "name": "FLOW/BUSD T2 TASUv2 AUTO",
+            "name": "FLOW/BUSD T2 TAB AUTO",
             "id": 7033512,
             "state": "disabled"
           },
           {
             "coin": "AMP",
-            "name": "AMP/BUSD T2 TASUv2 AUTO",
+            "name": "AMP/BUSD T2 TAB AUTO",
             "id": 7069301,
             "state": "disabled"
           },
           {
             "coin": "AMP",
-            "name": "AMP/BUSD T2 TASUv2 AUTO",
+            "name": "AMP/BUSD T2 TAB AUTO",
             "id": 7069302,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T2 TASUv2 AUTO",
+            "name": "MANA/BUSD T2 TAB AUTO",
             "id": 7074865,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T2 TASUv2 AUTO",
+            "name": "MANA/BUSD T2 TAB AUTO",
             "id": 7074866,
             "state": "disabled"
           },
           {
             "coin": "RNDR",
-            "name": "RNDR/BUSD T2 TASUv2 AUTO",
+            "name": "RNDR/BUSD T2 TAB AUTO",
             "id": 7468294,
             "state": "enabled"
           },
           {
             "coin": "RNDR",
-            "name": "RNDR/BUSD T2 TASUv2 AUTO",
+            "name": "RNDR/BUSD T2 TAB AUTO",
             "id": 7468295,
             "state": "enabled"
           },
           {
             "coin": "PEOPLE",
-            "name": "PEOPLE/BUSD T2 TASUv2 AUTO",
+            "name": "PEOPLE/BUSD T2 TAB AUTO",
             "id": 7468297,
             "state": "enabled"
           },
           {
             "coin": "PEOPLE",
-            "name": "PEOPLE/BUSD T2 TASUv2 AUTO",
+            "name": "PEOPLE/BUSD T2 TAB AUTO",
             "id": 7468298,
             "state": "enabled"
           },
           {
             "coin": "AR",
-            "name": "AR/BUSD T2 TASUv2 AUTO",
+            "name": "AR/BUSD T2 TAB AUTO",
             "id": 7472333,
             "state": "enabled"
           },
           {
             "coin": "AR",
-            "name": "AR/BUSD T2 TASUv2 AUTO",
+            "name": "AR/BUSD T2 TAB AUTO",
             "id": 7472334,
             "state": "enabled"
           }
@@ -1378,60 +1405,60 @@
         "name": "T3",
         "quote": "BUSD",
         "pair_number": 3,
-        "strategy": "TASUv2",
+        "strategy": "TAB",
         "coins": [],
         "bots": [
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T3 TASUv2 AUTO",
+            "name": "ENS/BUSD T3 TAB AUTO",
             "id": 7000419,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T3 TASUv2 AUTO",
+            "name": "ENS/BUSD T3 TAB AUTO",
             "id": 7000421,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T3 TASUv2 AUTO",
+            "name": "ENS/BUSD T3 TAB AUTO",
             "id": 7000422,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T3 TASUv2 AUTO",
+            "name": "GALA/BUSD T3 TAB AUTO",
             "id": 7015188,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T3 TASUv2 AUTO",
+            "name": "GALA/BUSD T3 TAB AUTO",
             "id": 7015189,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T3 TASUv2 AUTO",
+            "name": "GALA/BUSD T3 TAB AUTO",
             "id": 7015190,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T3 TASUv2 AUTO",
+            "name": "SAND/BUSD T3 TAB AUTO",
             "id": 7074320,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T3 TASUv2 AUTO",
+            "name": "SAND/BUSD T3 TAB AUTO",
             "id": 7074322,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T3 TASUv2 AUTO",
+            "name": "SAND/BUSD T3 TAB AUTO",
             "id": 7074324,
             "state": "disabled"
           }
@@ -1441,126 +1468,126 @@
         "name": "T4",
         "quote": "BUSD",
         "pair_number": 4,
-        "strategy": "TASUv2",
+        "strategy": "TAB",
         "coins": [],
         "bots": [
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T4 TASUv2 AUTO",
+            "name": "ENS/BUSD T4 TAB AUTO",
             "id": 6937409,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T4 TASUv2 AUTO",
+            "name": "ENS/BUSD T4 TAB AUTO",
             "id": 6937410,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T4 TASUv2 AUTO",
+            "name": "ENS/BUSD T4 TAB AUTO",
             "id": 6937413,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T4 TASUv2 AUTO",
+            "name": "ENS/BUSD T4 TAB AUTO",
             "id": 6937414,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T4 TASUv2 AUTO",
+            "name": "RARE/BUSD T4 TAB AUTO",
             "id": 6939016,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T4 TASUv2 AUTO",
+            "name": "RARE/BUSD T4 TAB AUTO",
             "id": 6939018,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T4 TASUv2 AUTO",
+            "name": "RARE/BUSD T4 TAB AUTO",
             "id": 6939019,
             "state": "disabled"
           },
           {
             "coin": "RARE",
-            "name": "RARE/BUSD T4 TASUv2 AUTO",
+            "name": "RARE/BUSD T4 TAB AUTO",
             "id": 6939020,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T4 TASUv2 AUTO",
+            "name": "SAND/BUSD T4 TAB AUTO",
             "id": 6968625,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T4 TASUv2 AUTO",
+            "name": "SAND/BUSD T4 TAB AUTO",
             "id": 6968626,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T4 TASUv2 AUTO",
+            "name": "SAND/BUSD T4 TAB AUTO",
             "id": 6968627,
             "state": "disabled"
           },
           {
             "coin": "SAND",
-            "name": "SAND/BUSD T4 TASUv2 AUTO",
+            "name": "SAND/BUSD T4 TAB AUTO",
             "id": 6968628,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T4 TASUv2 AUTO",
+            "name": "MANA/BUSD T4 TAB AUTO",
             "id": 6968629,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T4 TASUv2 AUTO",
+            "name": "MANA/BUSD T4 TAB AUTO",
             "id": 6968631,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T4 TASUv2 AUTO",
+            "name": "MANA/BUSD T4 TAB AUTO",
             "id": 6968632,
             "state": "disabled"
           },
           {
             "coin": "MANA",
-            "name": "MANA/BUSD T4 TASUv2 AUTO",
+            "name": "MANA/BUSD T4 TAB AUTO",
             "id": 6968633,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T4 TASUv2 AUTO",
+            "name": "GALA/BUSD T4 TAB AUTO",
             "id": 6978723,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T4 TASUv2 AUTO",
+            "name": "GALA/BUSD T4 TAB AUTO",
             "id": 6978724,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T4 TASUv2 AUTO",
+            "name": "GALA/BUSD T4 TAB AUTO",
             "id": 6978725,
             "state": "disabled"
           },
           {
             "coin": "GALA",
-            "name": "GALA/BUSD T4 TASUv2 AUTO",
+            "name": "GALA/BUSD T4 TAB AUTO",
             "id": 6978726,
             "state": "disabled"
           }
@@ -1570,36 +1597,36 @@
         "name": "T5",
         "quote": "BUSD",
         "pair_number": 5,
-        "strategy": "TASUv2",
+        "strategy": "TAB",
         "coins": [],
         "bots": [
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T5 TASUv2 AUTO",
+            "name": "ENS/BUSD T5 TAB AUTO",
             "id": 7097645,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T5 TASUv2 AUTO",
+            "name": "ENS/BUSD T5 TAB AUTO",
             "id": 7097646,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T5 TASUv2 AUTO",
+            "name": "ENS/BUSD T5 TAB AUTO",
             "id": 7097647,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T5 TASUv2 AUTO",
+            "name": "ENS/BUSD T5 TAB AUTO",
             "id": 7097648,
             "state": "disabled"
           },
           {
             "coin": "ENS",
-            "name": "ENS/BUSD T5 TASUv2 AUTO",
+            "name": "ENS/BUSD T5 TAB AUTO",
             "id": 7097649,
             "state": "disabled"
           }
@@ -2358,9 +2385,9 @@
         "pair_number": 1,
         "strategy": "TAH1",
         "coins": [
-          "FLOW",
+          "DOGE",
           "ENS",
-          "DOGE"
+          "FLOW"
         ],
         "bots": [
           {

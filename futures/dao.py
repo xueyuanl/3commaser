@@ -23,10 +23,8 @@ class Dao(object):
 
         if account.is_binance():
             pair = quote + '_' + base + quote
-            params['leverage_type'] = 'isolated'
         elif account.is_ftx():
             pair = quote + '_' + base + '-' + 'PERP'
-            params['leverage_type'] = 'cross'
 
         params['stop_loss'] = {
             'enabled': 'true',

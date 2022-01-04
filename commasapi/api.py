@@ -84,7 +84,7 @@ class ThreeCommas(object):
             rep = Response(response)
             if not rep.ok:
                 logger_.error(rep.data)
-                raise
+                raise Exception(rep.data)
             return rep
         except Exception as e:
             raise e

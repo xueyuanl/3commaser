@@ -4,7 +4,7 @@ from log import logger_
 from .constants import *
 
 volume_scheme = {TP_SCHEME403030: [40, 30, 30],
-                 TP_SCHEME10204020: [10, 20, 40, 30]}
+                 TP_SCHEME10204020: [10, 40, 30, 20]}
 
 
 def _three_target_profit_scheme(a, d):
@@ -56,15 +56,13 @@ class Gartley(object):
         account_id = account.id_
         params = {
             'position_type': self.position_type,
-            'order_type': ORDER_LIMIT
+            'order_type': ORDER_LIMIT,
         }
 
         if account.is_binance():
             pair = quote + '_' + base + quote
-            params['leverage_type'] = 'isolated'
         elif account.is_ftx():
             pair = quote + '_' + base + '-' + 'PERP'
-            params['leverage_type'] = 'cross'
 
         params['take_profit'] = {
             'enabled': 'true',
@@ -119,16 +117,6 @@ class Butterfly(Gartley):
         self.print_status()
 
 
-class Shark(Gartley):
-    def __init__(self, x, a, c):  # shark use c point to decide target profits
-        d = a - (a - x) * F1130
-        self.open_point = d
-        self.stop_loss = a - (a - x) * F1272
-        self.tp_scheme = _four_target_profit_scheme(c, d)
-        self.position_type = POSITION_BUY if x > d else POSITION_SELL
-        self.print_status()
-
-
 class Shark886(Gartley):
     def __init__(self, x, a, c):  # shark use c point to decide target profits
         d = a - (a - x) * F886
@@ -136,6 +124,16 @@ class Shark886(Gartley):
         self.stop_loss = x
         self.tp_scheme = _four_target_profit_scheme(c, d)
         self.position_type = POSITION_BUY if d > x else POSITION_SELL
+        self.print_status()
+
+
+class Shark113(Gartley):
+    def __init__(self, x, a, c):  # shark use c point to decide target profits
+        d = a - (a - x) * F1130
+        self.open_point = d
+        self.stop_loss = a - (a - x) * F1272
+        self.tp_scheme = _four_target_profit_scheme(c, d)
+        self.position_type = POSITION_BUY if x > d else POSITION_SELL
         self.print_status()
 
 

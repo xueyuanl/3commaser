@@ -18,7 +18,7 @@ def create_smart_trade(account_id, pair, total, price, leverage, **kwargs):
         'pair': pair,
         'leverage': {
             'enabled': True,
-            'type': kwargs['leverage_type'],
+            'type': kwargs.get('leverage_type', 'cross'),
             'value': leverage
         },
         'position': {

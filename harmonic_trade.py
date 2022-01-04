@@ -1,15 +1,15 @@
 import argparse
 
 from constants import *
-from futures.constants import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB, SHARK886
-from futures.harmonic import Gartley, Bat, Butterfly, Shark, Crab, Shark886
+from futures.constants import GARTLEY, BAT, BUTTERFLY, SHARK, CRAB, SHARK113
+from futures.harmonic import Gartley, Bat, Butterfly, Shark113, Crab, Shark886
 
 harmonics = {
     GARTLEY: Gartley,
     BAT: Bat,
     BUTTERFLY: Butterfly,
-    SHARK: Shark,
-    SHARK886: Shark886,
+    SHARK: Shark886,
+    SHARK113: Shark113,
     CRAB: Crab
 }
 
@@ -54,7 +54,7 @@ def main():
     leverage = args.leverage
     account_name = args.account
 
-    if harmonic == SHARK or harmonic == SHARK886:
+    if harmonic == SHARK or harmonic == SHARK113:
         if not c:
             raise Exception('need value on c')
         harmonic_obj = harmonics[harmonic](x, a, c)
@@ -75,8 +75,8 @@ def main():
     print(f'Max loss: {round(max_loss, 2)} USD at {round(harmonic_obj.get_lost_percentage() * 100, 2)}%.')
     print(f'Opening position on account {args.account}')
     print('------')
-
-    res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage, note=args.note)
+    note = args.note if args.note else args.harmonic + ', risk ' + str(round(max_loss, 2))
+    res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage, note=note)
     print('result: {}'.format(res.ok))
 
 

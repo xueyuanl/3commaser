@@ -89,20 +89,50 @@
   "TASUv1": {
     "name": "TA Strong Uptrend custom version 1",
     "TP": 1.5,
-    "BO": 20,
-    "SO": 40,
+    "BO": 10,
+    "SO": 20,
     "OS": 1.4,
     "SS": 1.23,
     "SOS": 2,
     "MSTC": 10,
     "info": {
-      "budget": 2815,
+      "budget": 1407,
       "coverage": 60.22,
       "request_change": 40.9
     }
   },
-  "TASUv2": {
-    "name": "TA Strong Uptrend custom version 2",
+  "TAB": {
+    "name": "a TA setting between TA standard and TASU",
+    "TP": 1.5,
+    "BO": 10,
+    "SO": 20,
+    "OS": 1.26,
+    "SS": 1.13,
+    "SOS": 2,
+    "MSTC": 13,
+    "info": {
+      "budget": 1487,
+      "coverage": 59.96,
+      "request_change": 41.47
+    }
+  },
+  "TABFTX": {
+    "name": "a TA setting between TA standard and TASU just for ftx",
+    "TP": 1.5,
+    "BO": 15,
+    "SO": 30,
+    "OS": 1.26,
+    "SS": 1.13,
+    "SOS": 2,
+    "MSTC": 13,
+    "info": {
+      "budget": 1487,
+      "coverage": 59.96,
+      "request_change": 41.47
+    }
+  },
+  "TABv1": {
+    "name": "up TAB to 20:40",
     "TP": 1.5,
     "BO": 20,
     "SO": 40,
@@ -113,7 +143,7 @@
     "info": {
       "budget": 2970,
       "coverage": 59.96,
-      "request_change": 43.62
+      "request_change": 41.47
     }
   },
   "TADR": {
