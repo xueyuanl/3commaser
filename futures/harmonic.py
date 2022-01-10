@@ -4,7 +4,7 @@ from log import logger_
 from .constants import *
 
 volume_scheme = {TP_SCHEME403030: [40, 30, 30],
-                 TP_SCHEME10204020: [10, 40, 30, 20]}
+                 TP_SCHEME10204020: [10, 50, 30, 10]}
 
 
 def _three_target_profit_scheme(a, d):
@@ -38,14 +38,14 @@ class Gartley(object):
     def print_status(self):
         logger_.info('|------')
         logger_.info('|{} pattern position type: {}, open point {}.'.format(
-            self.__class__.__name__, self.position_type, self.open_point))
+            self.__class__.__name__, self.position_type, round(self.open_point, 2)))
         scheme = ''
         for s in self.tp_scheme:
             scheme += '{}/{}%, '.format(round(s[0], 2), s[1])
         scheme = scheme[:-2]
         logger_.info('|Target profit scheme: {}.'.format(scheme))
         loss_percent = round(self.get_lost_percentage() * 100, 2)
-        logger_.info('|Stop loss {}, percentage {}%.'.format(self.stop_loss, loss_percent))
+        logger_.info('|Stop loss {}, percentage {}%.'.format(round(self.stop_loss, 2), loss_percent))
         logger_.info('|------')
 
     def get_lost_percentage(self):

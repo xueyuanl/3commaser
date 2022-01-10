@@ -47,7 +47,6 @@
           "DYDX",
           "ENS",
           "FTM",
-          "IMX",
           "MANA",
           "RNDR",
           "SAND"
@@ -57,7 +56,7 @@
             "coin": "IMX",
             "name": "IMX/USD T1 TABFTX AUTO",
             "id": 6933206,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
@@ -151,8 +150,7 @@
         "pair_number": 2,
         "strategy": "TABFTX",
         "coins": [
-          "ENS",
-          "IMX",
+          "FTM",
           "SAND"
         ],
         "bots": [
@@ -172,13 +170,13 @@
             "coin": "IMX",
             "name": "IMX/USD T2 TABFTX AUTO",
             "id": 6983561,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "IMX",
             "name": "IMX/USD T2 TABFTX AUTO",
             "id": 6983563,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "SAND",
@@ -220,13 +218,13 @@
             "coin": "ENS",
             "name": "ENS/USD T2 TABFTX AUTO",
             "id": 7071299,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "ENS",
             "name": "ENS/USD T2 TABFTX AUTO",
             "id": 7071301,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "MANA",
@@ -263,6 +261,18 @@
             "name": "BICO/USD T2 TABFTX AUTO",
             "id": 7210313,
             "state": "disabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/USD T2 TABFTX AUTO",
+            "id": 7641704,
+            "state": "enabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/USD T2 TABFTX AUTO",
+            "id": 7641705,
+            "state": "enabled"
           }
         ]
       },
@@ -1030,7 +1040,9 @@
           "AR",
           "ATOM",
           "AVAX",
+          "CHR",
           "ENS",
+          "FTM",
           "GALA",
           "LUNA",
           "MANA",
@@ -1059,7 +1071,7 @@
             "coin": "CHR",
             "name": "CHR/BUSD T1 TAB AUTO",
             "id": 6933210,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "WAXP",
@@ -1216,6 +1228,12 @@
             "name": "ONE/BUSD T1 TAB AUTO",
             "id": 7633146,
             "state": "enabled"
+          },
+          {
+            "coin": "FTM",
+            "name": "FTM/BUSD T1 TAB AUTO",
+            "id": 7633273,
+            "state": "enabled"
           }
         ]
       },
@@ -1226,7 +1244,6 @@
         "strategy": "TAB",
         "coins": [
           "AR",
-          "ENS",
           "PEOPLE",
           "RNDR"
         ],
@@ -1283,13 +1300,13 @@
             "coin": "ENS",
             "name": "ENS/BUSD T2 TAB AUTO",
             "id": 6998177,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "ENS",
             "name": "ENS/BUSD T2 TAB AUTO",
             "id": 6998178,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "AVAX",
@@ -1461,6 +1478,24 @@
             "name": "SAND/BUSD T3 TAB AUTO",
             "id": 7074324,
             "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T3 TAB AUTO",
+            "id": 7635696,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T3 TAB AUTO",
+            "id": 7635699,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T3 TAB AUTO",
+            "id": 7635701,
+            "state": "disabled"
           }
         ]
       },
@@ -1589,6 +1624,30 @@
             "coin": "GALA",
             "name": "GALA/BUSD T4 TAB AUTO",
             "id": 6978726,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T4 TAB AUTO",
+            "id": 7638624,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T4 TAB AUTO",
+            "id": 7638625,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T4 TAB AUTO",
+            "id": 7638626,
+            "state": "disabled"
+          },
+          {
+            "coin": "AR",
+            "name": "AR/BUSD T4 TAB AUTO",
+            "id": 7638627,
             "state": "disabled"
           }
         ]

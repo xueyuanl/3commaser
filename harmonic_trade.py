@@ -13,6 +13,12 @@ harmonics = {
     CRAB: Crab
 }
 
+accounts = {
+    FTX: FTX_PERP,
+    BINANCE: BIANACE_PERP,
+    BYBIT: BYBIT_PERP
+}
+
 
 def get_args():
     parser = argparse.ArgumentParser(description='3commas bot configuration')
@@ -30,7 +36,7 @@ def get_args():
     parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=20,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
-                        default=FTX_FUTURE, help='account name')
+                        default=FTX, help='account name')
     parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
     parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
@@ -52,7 +58,7 @@ def main():
     quote = args.quote
     invest = args.invest
     leverage = args.leverage
-    account_name = args.account
+    account_name = accounts[args.account]
 
     if harmonic == SHARK or harmonic == SHARK113:
         if not c:
@@ -73,7 +79,7 @@ def main():
     print(f'Total invest {round(invest, 2)} at leverage {args.leverage}')
     max_loss = args.risk if args.risk else invest * leverage * harmonic_obj.get_lost_percentage()
     print(f'Max loss: {round(max_loss, 2)} USD at {round(harmonic_obj.get_lost_percentage() * 100, 2)}%.')
-    print(f'Opening position on account {args.account}')
+    print(f'Opening position on account {account_name}')
     print('------')
     note = args.note if args.note else args.harmonic + ', risk ' + str(round(max_loss, 2))
     res = harmonic_obj.create_trade(account_name, base, quote, invest, leverage, note=note)

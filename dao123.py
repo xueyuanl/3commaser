@@ -19,7 +19,7 @@ def get_args():
     parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=20,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
-                        default=FTX_FUTURE, help='account name')
+                        default=FTX_PERP, help='account name')
     parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
     parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
