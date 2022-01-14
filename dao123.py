@@ -8,8 +8,7 @@ def get_args():
     parser = argparse.ArgumentParser(description='3commas bot configuration')
     parser.add_argument('-p', '--price', dest='price', required=True, action='store', type=float, help='open point')
     parser.add_argument('-s', '--stop', dest='stop', required=True, action='store', type=float, help='stop loss point')
-    parser.add_argument('--limit', dest='limit', action='store', type=float, help='condition limit order')
-
+    parser.add_argument('--limit', dest='limit', action='store_true', help='limit order')
     parser.add_argument('-b', '--base', dest='base', required=True, action='store', type=str, help='coin name')
     parser.add_argument('-q', '--quote', dest='quote', action='store', type=str, nargs='?',
                         default='USD', help='USDT or USD')
@@ -51,8 +50,8 @@ def main():
     print(f'Max loss: {round(max_loss, 2)} USD at {round(dao.get_lost_percentage() * 100, 2)}%.')
     print(f'Opening position on account {args.account}')
     print('------')
-
-    res = dao.create_trade(account_name, base, quote, invest, leverage, note=args.note)
+    params = {'note': args.note if args.note else 'dao123', 'limit': args.limit}
+    res = dao.create_trade(account_name, base, quote, invest, leverage, **params)
     print('result: {}'.format(res.ok))
 
 

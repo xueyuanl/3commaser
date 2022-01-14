@@ -24,4 +24,5 @@ docker run -it --rm \
 ```
 python3 harmonic_trade.py -b BTC -x 59800 -a 58800 
 python3 harmonic_trade.py -b MASK -x 9.7619 -a 13.8883  -r 30 -q USDT --account 'Binance Futures USDT-M'
+python3 dao123.py -b DOGE -p 0.1 -s 0.09 --limit
 ```
