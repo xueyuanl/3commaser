@@ -9,11 +9,12 @@ def _default_target_profit_scheme(o, s):
     #     tp_one = o + (o - s)
     # else:
     #     tp_one = o - (s - o)
-    tp_one = 2 * o - s
-    tp_two = 6 * o - 5 * s
-    tp_three = 9 * o - 8 * s
+    tp_one = 2 * o - 1 * s
+    tp_two = 4 * o - 3 * s
+    tp_three = 6 * o - 5 * s
+    tp_four = 8 * o - 7 * s
 
-    return [(tp_one, 10), (tp_two, 50), (tp_three, 40)]
+    return [(tp_one, 10), (tp_two, 50), (tp_three, 30), (tp_four, 10)]
 
 
 class Dao(object):
@@ -84,3 +85,10 @@ class Dao(object):
         total = invest * leverage
         res = create_smart_trade(account_id, pair, total, self.open_point, leverage, **params)
         return res
+
+    def cal_ttp_deviation(self):
+        """
+        calculate trailing take profit deviation
+        :return:
+        """
+        pass

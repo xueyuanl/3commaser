@@ -3,39 +3,39 @@ from commaser.smart_trade import create_smart_trade
 from log import logger_
 from .constants import *
 
-volume_scheme = {TP_SCHEME403030: [40, 30, 30],
-                 TP_SCHEME10204020: [10, 50, 30, 10]}
+tp_scheme1513 = [10, 50, 30, 10]
+tp_percent1 = [F146, F382, F5, F618]
+tp_percent2 = [F236, F382, F5, F618]
 
 
-def _three_target_profit_scheme(a, d):
-    tp_one = d - (d - a) * F382
-    tp_two = d - (d - a) * F5
-    tp_three = d - (d - a) * F618
+def _four_target_profit_scheme(a, d, scheme, percent):
+    tp_one = d - (d - a) * percent[0]
+    tp_two = d - (d - a) * percent[1]
+    tp_three = d - (d - a) * percent[2]
+    tp_four = d - (d - a) * percent[3]
 
-    vs = volume_scheme[TP_SCHEME403030]
-    return [(tp_one, vs[0]), (tp_two, vs[1]), (tp_three, vs[2])]
-
-
-def _four_target_profit_scheme(a, d):
-    tp_one = d - (d - a) * F146
-    tp_two = d - (d - a) * F382
-    tp_three = d - (d - a) * F5
-    tp_four = d - (d - a) * F618
-
-    vs = volume_scheme[TP_SCHEME10204020]
-    return [(tp_one, vs[0]), (tp_two, vs[1]), (tp_three, vs[2]), (tp_four, vs[3])]
+    return [(tp_one, scheme[0]), (tp_two, scheme[1]), (tp_three, scheme[2]), (tp_four, scheme[3])]
 
 
 class Gartley(object):
-    def __init__(self, x, a):
+    def __init__(self, x, a, c=None):
+        self._build_points(x, a, c)
+
+    def _build_points(self, x, a, c):
         d = a - (a - x) * F786  # XA 0.786 Retracement
         self.open_point = d
         self.stop_loss = x
-        self.tp_scheme = _four_target_profit_scheme(a, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if d > x else POSITION_SELL
-        self.print_status()
+        self._print_status()
 
-    def print_status(self):
+    def _get_tp_scheme(self, a, c):
+        if c:
+            return _four_target_profit_scheme(c, self.open_point, tp_scheme1513, tp_percent2)
+        else:
+            return _four_target_profit_scheme(a, self.open_point, tp_scheme1513, tp_percent1)
+
+    def _print_status(self):
         logger_.info('|------')
         logger_.info('|{} pattern position type: {}, open point {}.'.format(
             self.__class__.__name__, self.position_type, round(self.open_point, 2)))
@@ -98,50 +98,50 @@ class Gartley(object):
 
 
 class Bat(Gartley):
-    def __init__(self, x, a):
+    def _build_points(self, x, a, c):
         d = a - (a - x) * F886
         self.open_point = d
         self.stop_loss = x
-        self.tp_scheme = _four_target_profit_scheme(a, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if d > x else POSITION_SELL
-        self.print_status()
+        self._print_status()
 
 
 class Butterfly(Gartley):
-    def __init__(self, x, a):
+    def _build_points(self, x, a, c):
         d = a - (a - x) * F1272
         self.open_point = d
         self.stop_loss = a - (a - x) * F1414
-        self.tp_scheme = _four_target_profit_scheme(a, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if x > d else POSITION_SELL
-        self.print_status()
+        self._print_status()
 
 
 class Shark886(Gartley):
-    def __init__(self, x, a, c):  # shark use c point to decide target profits
+    def _build_points(self, x, a, c):  # shark use c point to decide target profits
         d = a - (a - x) * F886
         self.open_point = d
         self.stop_loss = x
         self.tp_scheme = _four_target_profit_scheme(c, d)
         self.position_type = POSITION_BUY if d > x else POSITION_SELL
-        self.print_status()
+        self._print_status()
 
 
 class Shark113(Gartley):
-    def __init__(self, x, a, c):  # shark use c point to decide target profits
+    def _build_points(self, x, a, c):  # shark use c point to decide target profits
         d = a - (a - x) * F1130
         self.open_point = d
         self.stop_loss = a - (a - x) * F1272
         self.tp_scheme = _four_target_profit_scheme(c, d)
         self.position_type = POSITION_BUY if x > d else POSITION_SELL
-        self.print_status()
+        self._print_status()
 
 
 class Crab(Gartley):
-    def __init__(self, x, a):
+    def _build_points(self, x, a, c):
         d = a - (a - x) * F1618
         self.open_point = d
         self.stop_loss = a - (a - x) * F2000
-        self.tp_scheme = _three_target_profit_scheme(a, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if x > d else POSITION_SELL
-        self.print_status()
+        self._print_status()

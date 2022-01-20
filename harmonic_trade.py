@@ -31,13 +31,13 @@ def get_args():
     parser.add_argument('-q', '--quote', dest='quote', action='store', type=str, nargs='?',
                         default='USD', help='USDT or USD')
 
-    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, nargs='?', default=50,
-                        help='number of invest')
+    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, help='number of invest')
     parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=20,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX, help='account name')
-    parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
+    parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, nargs='?', default=RISK,
+                        help='max loss money when stop loss')
     parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
     args = parser.parse_args()
@@ -53,10 +53,9 @@ def main():
     x = args.x
     a = args.a
     c = args.c
-    base = args.base
+    base = args.base.upper()
     # ------
     quote = args.quote
-    invest = args.invest
     leverage = args.leverage
     account_name = accounts[args.account]
 
@@ -65,9 +64,11 @@ def main():
             raise Exception('need value on c')
         harmonic_obj = harmonics[harmonic](x, a, c)
     else:
-        harmonic_obj = harmonics[harmonic](x, a)
-    if args.risk:
-        invest = args.risk / harmonic_obj.get_lost_percentage() / leverage
+        harmonic_obj = harmonics[harmonic](x, a, c=c) if c else harmonics[harmonic](x, a)
+
+    invest = args.risk / harmonic_obj.get_lost_percentage() / leverage
+    if args.invest:
+        invest = args.invest
 
     print('------')
     print(f'Harmonic pattern: {args.harmonic}.')

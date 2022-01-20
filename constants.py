@@ -6,3 +6,5 @@ BYBIT_PERP = 'Bybit USDT Perpetual'
 BINANCE = 'binance'
 FTX = 'ftx'
 BYBIT = 'bybit'
+
+RISK = 50  # USD

@@ -13,13 +13,12 @@ def get_args():
     parser.add_argument('-q', '--quote', dest='quote', action='store', type=str, nargs='?',
                         default='USD', help='USDT or USD')
 
-    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, nargs='?', default=50,
-                        help='number of invest')
+    parser.add_argument('-i', '--invest', dest='invest', action='store', type=int, help='number of invest')
     parser.add_argument('-l', '--leverage', dest='leverage', action='store', type=int, nargs='?', default=20,
                         help='leverage')
     parser.add_argument('--account', dest='account', action='store', type=str, nargs='?',
                         default=FTX_PERP, help='account name')
-    parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, help='max loss money')
+    parser.add_argument('-r', '--risk', dest='risk', action='store', type=float, nargs='?', default=RISK, help='max loss money')
     parser.add_argument('-n', '--note', dest='note', action='store', type=str, help='note message')
 
     args = parser.parse_args()
@@ -31,16 +30,17 @@ def main():
     price = args.price
     stop = args.stop
 
-    base = args.base
+    base = args.base.upper()
     # ------
     quote = args.quote
-    invest = args.invest
     leverage = args.leverage
     account_name = args.account
 
     dao = Dao(price, stop)
-    if args.risk:
-        invest = args.risk / dao.get_lost_percentage() / leverage
+
+    invest = args.risk / dao.get_lost_percentage() / leverage
+    if args.invest:
+        invest = args.invest
 
     print('------')
     print(f'Trade pair is {args.base}/{args.quote}.')
