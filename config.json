@@ -46,12 +46,13 @@
           "CHR",
           "DOGE",
           "DYDX",
-          "ENS",
           "FTM",
           "LOOKS",
           "MANA",
+          "PEOPLE",
           "RNDR",
-          "SAND"
+          "SAND",
+          "SHIB"
         ],
         "bots": [
           {
@@ -88,7 +89,7 @@
             "coin": "ENS",
             "name": "ENS/USD T1 TABFTX AUTO",
             "id": 6982458,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "TLM",
@@ -155,6 +156,18 @@
             "name": "DOGE/USD T1 TABFTX AUTO",
             "id": 7754575,
             "state": "enabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/USD T1 TABFTX AUTO",
+            "id": 8044685,
+            "state": "enabled"
+          },
+          {
+            "coin": "SHIB",
+            "name": "SHIB/USD T1 TABFTX AUTO",
+            "id": 8070139,
+            "state": "enabled"
           }
         ]
       },
@@ -164,7 +177,7 @@
         "pair_number": 2,
         "strategy": "TABFTX",
         "coins": [
-          "FTM"
+          "PEOPLE"
         ],
         "bots": [
           {
@@ -279,13 +292,13 @@
             "coin": "FTM",
             "name": "FTM/USD T2 TABFTX AUTO",
             "id": 7641704,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "FTM",
             "name": "FTM/USD T2 TABFTX AUTO",
             "id": 7641705,
-            "state": "enabled"
+            "state": "disabled"
           },
           {
             "coin": "LOOKS",
@@ -298,6 +311,18 @@
             "name": "LOOKS/USD T2 TABFTX AUTO",
             "id": 7745402,
             "state": "disabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/USD T2 TABFTX AUTO",
+            "id": 8043391,
+            "state": "enabled"
+          },
+          {
+            "coin": "PEOPLE",
+            "name": "PEOPLE/USD T2 TABFTX AUTO",
+            "id": 8043392,
+            "state": "enabled"
           }
         ]
       },
@@ -1041,11 +1066,15 @@
           "ANT",
           "AR",
           "ATOM",
+          "FTM",
           "GALA",
           "LUNA",
+          "MATIC",
           "NEAR",
           "ONE",
-          "SCRT"
+          "PEOPLE",
+          "SCRT",
+          "SHIB"
         ],
         "bots": [
           {
@@ -1196,7 +1225,7 @@
             "coin": "PEOPLE",
             "name": "PEOPLE/BUSD T1 TAB AUTO",
             "id": 7457934,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "SCRT",
@@ -1226,12 +1255,24 @@
             "coin": "FTM",
             "name": "FTM/BUSD T1 TAB AUTO",
             "id": 7633273,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "ANT",
             "name": "ANT/BUSD T1 TAB AUTO",
             "id": 7754735,
+            "state": "enabled"
+          },
+          {
+            "coin": "SHIB",
+            "name": "SHIB/BUSD T1 TAB AUTO",
+            "id": 8070141,
+            "state": "enabled"
+          },
+          {
+            "coin": "MATIC",
+            "name": "MATIC/BUSD T1 TAB AUTO",
+            "id": 8072848,
             "state": "enabled"
           }
         ]
@@ -1241,19 +1282,21 @@
         "quote": "BUSD",
         "pair_number": 2,
         "strategy": "TAB",
-        "coins": [],
+        "coins": [
+          "GALA"
+        ],
         "bots": [
           {
             "coin": "GALA",
             "name": "GALA/BUSD T2 TAB AUTO",
             "id": 6981804,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "GALA",
             "name": "GALA/BUSD T2 TAB AUTO",
             "id": 6981805,
-            "state": "disabled"
+            "state": "enabled"
           },
           {
             "coin": "SAND",

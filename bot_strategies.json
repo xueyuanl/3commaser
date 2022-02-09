@@ -86,21 +86,6 @@
       "request_change": 41.39
     }
   },
-  "TASUv1": {
-    "name": "TA Strong Uptrend custom version 1",
-    "TP": 1.5,
-    "BO": 10,
-    "SO": 20,
-    "OS": 1.4,
-    "SS": 1.23,
-    "SOS": 2,
-    "MSTC": 10,
-    "info": {
-      "budget": 1407,
-      "coverage": 60.22,
-      "request_change": 40.9
-    }
-  },
   "TAB": {
     "name": "a TA setting between TA standard and TASU",
     "TP": 1.5,
@@ -113,7 +98,7 @@
     "info": {
       "budget": 1487,
       "coverage": 59.96,
-      "request_change": 41.47
+      "request_change": 43.58
     }
   },
   "TABFTX": {
@@ -128,7 +113,7 @@
     "info": {
       "budget": 1487,
       "coverage": 59.96,
-      "request_change": 41.47
+      "request_change": 43.58
     }
   },
   "TABv1": {

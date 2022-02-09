@@ -3,7 +3,7 @@ from commaser.smart_trade import create_smart_trade
 from log import logger_
 from .constants import *
 
-tp_scheme1513 = [10, 50, 30, 10]
+tp_scheme1513 = [5, 60, 25, 10]
 tp_percent1 = [F146, F382, F5, F618]
 tp_percent2 = [F236, F382, F5, F618]
 
@@ -122,7 +122,7 @@ class Shark886(Gartley):
         d = a - (a - x) * F886
         self.open_point = d
         self.stop_loss = x
-        self.tp_scheme = _four_target_profit_scheme(c, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if d > x else POSITION_SELL
         self._print_status()
 
@@ -132,7 +132,7 @@ class Shark113(Gartley):
         d = a - (a - x) * F1130
         self.open_point = d
         self.stop_loss = a - (a - x) * F1272
-        self.tp_scheme = _four_target_profit_scheme(c, d)
+        self.tp_scheme = self._get_tp_scheme(a, c)
         self.position_type = POSITION_BUY if x > d else POSITION_SELL
         self._print_status()
 

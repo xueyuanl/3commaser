@@ -10,11 +10,12 @@ def _default_target_profit_scheme(o, s):
     # else:
     #     tp_one = o - (s - o)
     tp_one = 2 * o - 1 * s
-    tp_two = 4 * o - 3 * s
-    tp_three = 6 * o - 5 * s
-    tp_four = 8 * o - 7 * s
+    tp_two = 3 * o - 2 * s
+    tp_three = 4 * o - 3 * s
+    tp_four = 4.5 * o - 3.5 * s
+    tp_five = 5 * o - 4 * s
 
-    return [(tp_one, 10), (tp_two, 50), (tp_three, 30), (tp_four, 10)]
+    return [(tp_one, 5), (tp_two, 15), (tp_three, 55), (tp_four, 15), (tp_five, 10)]
 
 
 class Dao(object):
